@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC050C7B-3324-4E3E-8C6C-90749824DF2F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LabMan</RootNamespace>
+    <AssemblyName>LabMan</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LabMan.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddDevice.Designer.cs">
+      <DependentUpon>frmAddDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddGroup.Designer.cs">
+      <DependentUpon>frmAddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOrderProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOrderProd.Designer.cs">
+      <DependentUpon>frmAddOrderProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPlant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPlant.Designer.cs">
+      <DependentUpon>frmAddPlant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProductionLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProductionLine.Designer.cs">
+      <DependentUpon>frmAddProductionLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddType.Designer.cs">
+      <DependentUpon>frmAddType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUserGroup.Designer.cs">
+      <DependentUpon>frmAddUserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnection.Designer.cs">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevices.Designer.cs">
+      <DependentUpon>frmDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevicesGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevicesGroups.Designer.cs">
+      <DependentUpon>frmDevicesGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevicesTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevicesTypes.Designer.cs">
+      <DependentUpon>frmDevicesTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditParameter.Designer.cs">
+      <DependentUpon>frmEditParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword.Designer.cs">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualPrint.Designer.cs">
+      <DependentUpon>frmManualPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderAssignation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderAssignation.Designer.cs">
+      <DependentUpon>frmOrderAssignation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderProduction.Designer.cs">
+      <DependentUpon>frmOrderProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParameters.Designer.cs">
+      <DependentUpon>frmParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParent.Designer.cs">
+      <DependentUpon>frmParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlants.Designer.cs">
+      <DependentUpon>frmPlants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductionLines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductionLines.Designer.cs">
+      <DependentUpon>frmProductionLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProducts.Designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchedule.Designer.cs">
+      <DependentUpon>frmSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubMain.Designer.cs">
+      <DependentUpon>frmSubMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserGroup.Designer.cs">
+      <DependentUpon>frmUserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UBSLABMN_MXDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UBSLABMN_MXDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UBSLABMN_MXOrderProd.cs">
+      <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UBSLABMN_MXOrderProd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddDevice.resx">
+      <DependentUpon>frmAddDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddGroup.resx">
+      <DependentUpon>frmAddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOrderProd.resx">
+      <DependentUpon>frmAddOrderProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPlant.resx">
+      <DependentUpon>frmAddPlant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProductionLine.resx">
+      <DependentUpon>frmAddProductionLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddType.resx">
+      <DependentUpon>frmAddType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUserGroup.resx">
+      <DependentUpon>frmAddUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnection.resx">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDevices.resx">
+      <DependentUpon>frmDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDevicesGroups.resx">
+      <DependentUpon>frmDevicesGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDevicesTypes.resx">
+      <DependentUpon>frmDevicesTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditParameter.resx">
+      <DependentUpon>frmEditParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPrint.resx">
+      <DependentUpon>frmManualPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderAssignation.resx">
+      <DependentUpon>frmOrderAssignation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderProduction.resx">
+      <DependentUpon>frmOrderProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParameters.resx">
+      <DependentUpon>frmParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParent.resx">
+      <DependentUpon>frmParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlants.resx">
+      <DependentUpon>frmPlants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductionLines.resx">
+      <DependentUpon>frmProductionLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchedule.resx">
+      <DependentUpon>frmSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubMain.resx">
+      <DependentUpon>frmSubMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserGroup.resx">
+      <DependentUpon>frmUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UBSLABMN_MXDataSet.xsc">
+      <DependentUpon>UBSLABMN_MXDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UBSLABMN_MXDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UBSLABMN_MXDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UBSLABMN_MXDataSet.xss">
+      <DependentUpon>UBSLABMN_MXDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UBSLABMN_MXOrderProd.xsc">
+      <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
+    </None>
+    <None Include="UBSLABMN_MXOrderProd.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UBSLABMN_MXOrderProd.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UBSLABMN_MXOrderProd.xss">
+      <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOSINLETRAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOrderProduction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManualPrint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnProducts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDevicesTypes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnParameters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnUsers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnGroups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPlants.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnProductionLines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDevices.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSchedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDevicesGroups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConnection_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDevices_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDevicesGroups_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDevicesTypes_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnGroups_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManualPrint_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOrderProduction_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnParameters_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPlants_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnProductionLines_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnProducts_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSchedule_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnUsers_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAccept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAcceptPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAddPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconPassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconNumeric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconCalendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconAlert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconOk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSendPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOrderProduction1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\APL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnUpload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconClock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
