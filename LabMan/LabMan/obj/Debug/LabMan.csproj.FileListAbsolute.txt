@@ -92,3 +92,44 @@ D:\Documentos\UBS\Clientes\Labman\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmPro
 D:\Documentos\UBS\Clientes\Labman\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmSchedule.resources
 D:\Documentos\UBS\Clientes\Labman\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmUserGroup.resources
 D:\Documentos\UBS\Clientes\Labman\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmUsers.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\bin\Debug\LabMan.exe.config
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\bin\Debug\LabMan.exe
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\bin\Debug\LabMan.pdb
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\bin\Debug\MaterialSkin.dll
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.csprojAssemblyReference.cache
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.Form1.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddDevice.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddGroup.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddOrderProd.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddPlant.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddProduct.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddProductionLine.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddType.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddUser.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmAddUserGroup.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmConnection.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmDevices.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmDevicesGroups.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmDevicesTypes.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmEditParameter.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmForgotPassword.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmLogin.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmMain.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmManualPrint.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmOrderAssignation.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmOrderProduction.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmParameters.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmParent.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmPlants.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmProductionLines.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmProducts.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmSchedule.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmSubMain.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmUserGroup.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmUsers.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.Properties.Resources.resources
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.csproj.GenerateResource.cache
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.csproj.CopyComplete
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.exe
+C:\Users\Daniel Granados\Documents\Proyectos\Labman\Lite\Respaldo\LabMan\LabMan\obj\Debug\LabMan.pdb

@@ -12,7 +12,7 @@ namespace LabMan.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,10 +26,22 @@ namespace LabMan.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=P-UBS302;Initial Catalog=UBSLABMN_MX;User ID=sa;Password=Ubscode_1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=P-UBS305B;Initial Catalog=UBSLABMN_MX;User ID=LabmanDevel;Password=Ub" +
+            "scode_1")]
         public string UBSLABMN_MXConnectionString {
             get {
                 return ((string)(this["UBSLABMN_MXConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=P-UBS305B\\UBSSERVER;Initial Catalog=UBSLABMN_MX;Integrated Security=T" +
+            "rue")]
+        public string UBSLABMN_MX {
+            get {
+                return ((string)(this["UBSLABMN_MX"]));
             }
         }
     }

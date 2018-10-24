@@ -28,19 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddOrderProd));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.frmPanel2 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lblQuantityXPallet = new System.Windows.Forms.Label();
             this.lblWorkcenter = new System.Windows.Forms.Label();
             this.lblProduct = new System.Windows.Forms.Label();
             this.numQtyXPallet = new System.Windows.Forms.NumericUpDown();
             this.selWorkcenter = new System.Windows.Forms.ComboBox();
+            this.btnAddOrder = new System.Windows.Forms.Button();
             this.selProduct = new System.Windows.Forms.ComboBox();
             this.frmPanel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPlannedDate = new System.Windows.Forms.Label();
             this.lblPlannedQty = new System.Windows.Forms.Label();
             this.lblPlant = new System.Windows.Forms.Label();
@@ -50,33 +61,28 @@
             this.dpPlannedDate = new System.Windows.Forms.DateTimePicker();
             this.txtOrderNumber = new System.Windows.Forms.TextBox();
             this.lblFormTitle = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.btnAddOrder = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBack = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tPLANTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uBSLABMN_MXDataSet1 = new LabMan.UBSLABMN_MXDataSet1();
+            this.tPLANTTableAdapter = new LabMan.UBSLABMN_MXDataSet1TableAdapters.TPLANTTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.frmPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numQtyXPallet)).BeginInit();
-            this.frmPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPlannedQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQtyXPallet)).BeginInit();
+            this.frmPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlannedQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPLANTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -98,6 +104,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1024, 60);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnBack.BackgroundImage = global::LabMan.Properties.Resources.left_arrow;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBack.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnBack.Location = new System.Drawing.Point(991, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(29, 20);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -111,6 +130,17 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.7931F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(354, 54);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::LabMan.Properties.Resources.btnOrderProduction;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(205, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 29);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // tableLayoutPanel4
             // 
@@ -167,6 +197,45 @@
             this.frmPanel2.Name = "frmPanel2";
             this.frmPanel2.Size = new System.Drawing.Size(247, 401);
             this.frmPanel2.TabIndex = 1;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(19, 199);
+            this.pictureBox8.MaximumSize = new System.Drawing.Size(20, 12);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(20, 12);
+            this.pictureBox8.TabIndex = 16;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(19, 120);
+            this.pictureBox7.MaximumSize = new System.Drawing.Size(20, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(20, 10);
+            this.pictureBox7.TabIndex = 15;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(19, 44);
+            this.pictureBox6.MaximumSize = new System.Drawing.Size(20, 10);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(20, 10);
+            this.pictureBox6.TabIndex = 14;
+            this.pictureBox6.TabStop = false;
             // 
             // lblQuantityXPallet
             // 
@@ -247,6 +316,32 @@
             this.selWorkcenter.TabIndex = 3;
             this.selWorkcenter.TabStop = false;
             // 
+            // btnAddOrder
+            // 
+            this.btnAddOrder.AccessibleName = "Orden de produccion";
+            this.btnAddOrder.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnAddOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddOrder.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddOrder.BackgroundImage = global::LabMan.Properties.Resources.btnAcceptPress;
+            this.btnAddOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddOrder.Enabled = false;
+            this.btnAddOrder.FlatAppearance.BorderSize = 0;
+            this.btnAddOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddOrder.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAddOrder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnAddOrder.Location = new System.Drawing.Point(47, 270);
+            this.btnAddOrder.MaximumSize = new System.Drawing.Size(151, 28);
+            this.btnAddOrder.MinimumSize = new System.Drawing.Size(151, 28);
+            this.btnAddOrder.Name = "btnAddOrder";
+            this.btnAddOrder.Size = new System.Drawing.Size(151, 28);
+            this.btnAddOrder.TabIndex = 7;
+            this.btnAddOrder.TabStop = false;
+            this.btnAddOrder.Text = "Agregar";
+            this.btnAddOrder.UseVisualStyleBackColor = false;
+            this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
+            // 
             // selProduct
             // 
             this.selProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -283,6 +378,58 @@
             this.frmPanel1.Name = "frmPanel1";
             this.frmPanel1.Size = new System.Drawing.Size(247, 401);
             this.frmPanel1.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::LabMan.Properties.Resources.iconCalendar;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(21, 273);
+            this.pictureBox5.MaximumSize = new System.Drawing.Size(20, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(20, 17);
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(21, 199);
+            this.pictureBox4.MaximumSize = new System.Drawing.Size(20, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 12);
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(21, 119);
+            this.pictureBox3.MaximumSize = new System.Drawing.Size(20, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 10);
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::LabMan.Properties.Resources.iconText;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 38);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(20, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 12);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // lblPlannedDate
             // 
@@ -375,6 +522,8 @@
             this.selPlant.Size = new System.Drawing.Size(161, 26);
             this.selPlant.TabIndex = 2;
             this.selPlant.TabStop = false;
+            this.selPlant.Click += new System.EventHandler(this.selProduct_SelectedIndexChanged);
+            this.selPlant.SelectedIndexChanged += new System.EventHandler(this.selWorkcenter_SelectedIndexChanged);
             // 
             // dpPlannedDate
             // 
@@ -398,14 +547,12 @@
             this.txtOrderNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOrderNumber.BackColor = System.Drawing.SystemColors.Menu;
             this.txtOrderNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOrderNumber.Enabled = false;
             this.txtOrderNumber.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtOrderNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.txtOrderNumber.Location = new System.Drawing.Point(47, 36);
             this.txtOrderNumber.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtOrderNumber.MaximumSize = new System.Drawing.Size(300, 30);
             this.txtOrderNumber.Name = "txtOrderNumber";
-            this.txtOrderNumber.ReadOnly = true;
             this.txtOrderNumber.Size = new System.Drawing.Size(161, 18);
             this.txtOrderNumber.TabIndex = 0;
             this.txtOrderNumber.TabStop = false;
@@ -426,145 +573,19 @@
             this.lblFormTitle.Text = "Nueva órden de producción";
             this.lblFormTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox8
+            // tPLANTBindingSource
             // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(19, 199);
-            this.pictureBox8.MaximumSize = new System.Drawing.Size(20, 12);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(20, 12);
-            this.pictureBox8.TabIndex = 16;
-            this.pictureBox8.TabStop = false;
+            this.tPLANTBindingSource.DataMember = "TPLANT";
+            this.tPLANTBindingSource.DataSource = this.uBSLABMN_MXDataSet1;
             // 
-            // pictureBox7
+            // uBSLABMN_MXDataSet1
             // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(19, 120);
-            this.pictureBox7.MaximumSize = new System.Drawing.Size(20, 10);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(20, 10);
-            this.pictureBox7.TabIndex = 15;
-            this.pictureBox7.TabStop = false;
+            this.uBSLABMN_MXDataSet1.DataSetName = "UBSLABMN_MXDataSet1";
+            this.uBSLABMN_MXDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pictureBox6
+            // tPLANTTableAdapter
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(19, 44);
-            this.pictureBox6.MaximumSize = new System.Drawing.Size(20, 10);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(20, 10);
-            this.pictureBox6.TabIndex = 14;
-            this.pictureBox6.TabStop = false;
-            // 
-            // btnAddOrder
-            // 
-            this.btnAddOrder.AccessibleName = "Orden de produccion";
-            this.btnAddOrder.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnAddOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddOrder.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddOrder.BackgroundImage = global::LabMan.Properties.Resources.btnAcceptPress;
-            this.btnAddOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddOrder.Enabled = false;
-            this.btnAddOrder.FlatAppearance.BorderSize = 0;
-            this.btnAddOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddOrder.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAddOrder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAddOrder.Location = new System.Drawing.Point(47, 270);
-            this.btnAddOrder.MaximumSize = new System.Drawing.Size(151, 28);
-            this.btnAddOrder.MinimumSize = new System.Drawing.Size(151, 28);
-            this.btnAddOrder.Name = "btnAddOrder";
-            this.btnAddOrder.Size = new System.Drawing.Size(151, 28);
-            this.btnAddOrder.TabIndex = 7;
-            this.btnAddOrder.TabStop = false;
-            this.btnAddOrder.Text = "Agregar";
-            this.btnAddOrder.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::LabMan.Properties.Resources.iconCalendar;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(21, 273);
-            this.pictureBox5.MaximumSize = new System.Drawing.Size(20, 17);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(20, 17);
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(21, 199);
-            this.pictureBox4.MaximumSize = new System.Drawing.Size(20, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 12);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 119);
-            this.pictureBox3.MaximumSize = new System.Drawing.Size(20, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 10);
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::LabMan.Properties.Resources.iconText;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 38);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(20, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 12);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnBack.BackgroundImage = global::LabMan.Properties.Resources.left_arrow;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBack.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnBack.Location = new System.Drawing.Point(991, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(29, 20);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.TabStop = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::LabMan.Properties.Resources.btnOrderProduction;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(205, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 29);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.tPLANTTableAdapter.ClearBeforeFill = true;
             // 
             // frmAddOrderProd
             // 
@@ -581,26 +602,29 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Órdenes de Producción";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.selPlant_SelectedIndexChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.frmPanel2.ResumeLayout(false);
             this.frmPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numQtyXPallet)).EndInit();
-            this.frmPanel1.ResumeLayout(false);
-            this.frmPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPlannedQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQtyXPallet)).EndInit();
+            this.frmPanel1.ResumeLayout(false);
+            this.frmPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlannedQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPLANTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -639,5 +663,8 @@
         private System.Windows.Forms.NumericUpDown numPlannedQty;
         private System.Windows.Forms.ComboBox selPlant;
         private System.Windows.Forms.DateTimePicker dpPlannedDate;
+        private UBSLABMN_MXDataSet1 uBSLABMN_MXDataSet1;
+        private System.Windows.Forms.BindingSource tPLANTBindingSource;
+        private UBSLABMN_MXDataSet1TableAdapters.TPLANTTableAdapter tPLANTTableAdapter;
     }
 }
