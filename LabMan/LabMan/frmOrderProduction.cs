@@ -29,7 +29,7 @@ namespace LabMan
             // TODO: esta línea de código carga datos en la tabla 'uBSLABMN_MXOrderProd.TORDERPRODUCTION' Puede moverla o quitarla según sea necesario.
             try
             {
-                this.tORDERPRODUCTIONTableAdapter.Fill(this.uBSLABMN_MXOrderProd.TORDERPRODUCTION);
+                //this.tORDERPRODUCTIONTableAdapter.Fill(this.uBSLABMN_MXOrderProd.TORDERPRODUCTION);
             }
             catch (System.Exception ex)
             {
@@ -72,6 +72,6 @@ namespace LabMan
             }
             //btnAddOrder.BackgroundImage = global::LabMan.Properties.Resources.btnAdd;
         }
-        
+
     }
 }

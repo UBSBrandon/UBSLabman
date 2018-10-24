@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -92,6 +93,7 @@ namespace LabMan
             SqlCommand commd = new SqlCommand("Sp_SelectProducts", conn) { CommandType = CommandType.StoredProcedure};
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(commd);
+            selProduct.Text = "";
             selProduct.Items.Clear();
             try
             {
@@ -124,6 +126,7 @@ namespace LabMan
             SqlCommand commd = new SqlCommand("Sp_SelectWorkcenters", conn) { CommandType = CommandType.StoredProcedure };
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(commd);
+            selWorkcenter.Text = "";
             selWorkcenter.Items.Clear();
             try
             {
@@ -174,21 +177,25 @@ namespace LabMan
                 commd.Parameters.Add("PngDate", SqlDbType.DateTime);
                 commd.Parameters.Add("PalletxQty", SqlDbType.Int);
                 commd.Parameters.Add("User", SqlDbType.VarChar, 10);
+
                 var itemPant = selPlant.SelectedItem.ToString();
                 itemPant = itemPant.Substring(0,4);
+
                 var itemProduct = selProduct.SelectedItem.ToString();
                 var array = itemProduct.Split('-');
                 string objProduct = array[0].ToString().Trim();
+
                 var itemWorkcenter = selWorkcenter.SelectedItem.ToString();
                 itemWorkcenter = itemWorkcenter.Substring(0, 7);
-                commd.Parameters.AddWithValue("Order", txtOrderNumber.Text);
-                commd.Parameters.AddWithValue("Plant", itemPant);
-                commd.Parameters.AddWithValue("Mat", objProduct);
-                commd.Parameters.AddWithValue("Workcenter", itemWorkcenter);
-                commd.Parameters.AddWithValue("PngQty", numPlannedQty.Value);
-                commd.Parameters.AddWithValue("PngDate", dpPlannedDate.Value);
-                commd.Parameters.AddWithValue("PalletxQty", numQtyXPallet.Value);
-                commd.Parameters.AddWithValue("User", "Test");
+
+                commd.Parameters["Order"].Value =  txtOrderNumber.Text;
+                commd.Parameters["Plant"].Value = itemPant;
+                commd.Parameters["Mat"].Value = objProduct;
+                commd.Parameters["Workcenter"].Value = itemWorkcenter;
+                commd.Parameters["PngQty"].Value = numPlannedQty.Value;
+                commd.Parameters["PngDate"].Value = dpPlannedDate.Value.Date + dpPlannedDate.Value.TimeOfDay;
+                commd.Parameters["PalletxQty"].Value = numQtyXPallet.Value;
+                commd.Parameters["User"].Value = "Test";
                 commd.ExecuteNonQuery();
             }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -196,11 +203,39 @@ namespace LabMan
             conn.Dispose();
         }
 
+        private void ClearForm(object sender, EventArgs e) {
+            txtOrderNumber.Text = "";
+            selProduct.Text = "";
+            selProduct.Items.Clear();
+            selWorkcenter.Text = "";
+            selWorkcenter.Items.Clear();
+            numPlannedQty.Value = 0;
+            numQtyXPallet.Value = 0;
+            dpPlannedDate.Value = DateTime.Now;
+            selPlant.Text = "";
+            selPlant_SelectedIndexChanged(sender, e);
+        }
 
         private void btnAddOrder_Click(object sender, EventArgs e)
         {
             this.CreateOrder();
-            MessageBox.Show("Esta funcion esta OK");
+            MessageBox.Show(String.Format("La Orden  '{0}'  se ha creado exitosamente.",txtOrderNumber.Text));
+            ClearForm(sender,e);
+
+            var type = Type.GetType("LabMan.frmOrderProduction");
+            var form = Activator.CreateInstance(type) as Form;
+            if (form != null)
+            {
+                form.MdiParent = this.ParentForm;
+                form.BackColor = Color.AliceBlue;
+                form.Dock = DockStyle.Fill;
+                form.MinimizeBox = false;
+                form.MaximizeBox = false;
+                form.WindowState = FormWindowState.Normal;
+                this.Dispose();
+                form.Show();
+            }
         }
+
     }
 }

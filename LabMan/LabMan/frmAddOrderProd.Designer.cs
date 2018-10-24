@@ -522,8 +522,8 @@
             this.selPlant.Size = new System.Drawing.Size(161, 26);
             this.selPlant.TabIndex = 2;
             this.selPlant.TabStop = false;
-            this.selPlant.Click += new System.EventHandler(this.selProduct_SelectedIndexChanged);
             this.selPlant.SelectedIndexChanged += new System.EventHandler(this.selWorkcenter_SelectedIndexChanged);
+            this.selPlant.Click += new System.EventHandler(this.selProduct_SelectedIndexChanged);
             // 
             // dpPlannedDate
             // 
@@ -552,11 +552,12 @@
             this.txtOrderNumber.Location = new System.Drawing.Point(47, 36);
             this.txtOrderNumber.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtOrderNumber.MaximumSize = new System.Drawing.Size(300, 30);
+            this.txtOrderNumber.MaxLength = 12;
             this.txtOrderNumber.Name = "txtOrderNumber";
+            this.txtOrderNumber.ShortcutsEnabled = false;
             this.txtOrderNumber.Size = new System.Drawing.Size(161, 18);
             this.txtOrderNumber.TabIndex = 0;
             this.txtOrderNumber.TabStop = false;
-            this.txtOrderNumber.Text = "Dummie Text";
             // 
             // lblFormTitle
             // 
