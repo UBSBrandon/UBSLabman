@@ -36,6 +36,8 @@ namespace LabMan
                 form.WindowState = FormWindowState.Normal;
                 this.Dispose();
                 form.Show();
+                //Holi
+                //Otro holi
             }
         }
 
