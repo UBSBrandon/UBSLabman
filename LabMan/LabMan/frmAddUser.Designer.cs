@@ -286,6 +286,7 @@
             this.txtPasswordConfirm.TabIndex = 16;
             this.txtPasswordConfirm.TabStop = false;
             this.txtPasswordConfirm.Text = "Dummie Text";
+            this.txtPasswordConfirm.TextChanged += new System.EventHandler(this.txtPasswordConfirm_TextChanged);
             // 
             // txtLastName
             // 
@@ -365,7 +366,6 @@
             this.btnAddUser.BackgroundImage = global::LabMan.Properties.Resources.btnAcceptPress;
             this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddUser.Enabled = false;
             this.btnAddUser.FlatAppearance.BorderSize = 0;
             this.btnAddUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -379,6 +379,7 @@
             this.btnAddUser.TabStop = false;
             this.btnAddUser.Text = "Agregar";
             this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // selGroupId
             // 

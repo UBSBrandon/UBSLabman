@@ -38,5 +38,42 @@ namespace LabMan
                 form.Show();
             }
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            UBSDataBaseAccess1.st_Users par;
+            if ( txtUserId.Text!="" || txtFirstName.Text!="" || txtPassword.Text!="" || txtPasswordConfirm.Text!=""
+                || txtSecretAnswer.Text!="" || txtLastName.Text!="" )
+            {
+                par.UserId = txtUserId.Text;
+                par.GroupId = selGroupId.Text;
+                par.Password = txtPassword.Text;
+                par.FirstName = txtFirstName.Text;
+                par.LastName = txtLastName.Text;
+                par.PlantId = selPlant.Text;
+                par.SecretAnswer = txtSecretAnswer.Text;
+                par.SecretAsk = selSecretAskId.Text;
+                par.TransactionID = "I";
+                //par.CUserId;
+            }
+            else
+            {
+                MessageBox.Show("Completa todos los datos");
+            }
+        }
+
+        private void txtPasswordConfirm_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPasswordConfirm != txtPassword)
+            {
+                txtPasswordConfirm.ForeColor = Color.Red;
+                btnAddUser.Enabled = false;
+            }
+            else
+            {
+                txtPasswordConfirm.ForeColor = Color.Black;
+                btnAddUser.Enabled = true;
+            }
+        }
     }
 }

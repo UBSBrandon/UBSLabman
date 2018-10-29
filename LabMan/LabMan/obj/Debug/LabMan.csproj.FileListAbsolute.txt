@@ -92,3 +92,44 @@ D:\Documentos\UBS\Clientes\Labman\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmPro
 D:\Documentos\UBS\Clientes\Labman\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmSchedule.resources
 D:\Documentos\UBS\Clientes\Labman\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmUserGroup.resources
 D:\Documentos\UBS\Clientes\Labman\Respaldo\LabMan\LabMan\obj\Debug\LabMan.frmUsers.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\bin\Debug\LabMan.exe.config
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\bin\Debug\LabMan.exe
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\bin\Debug\LabMan.pdb
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\bin\Debug\MaterialSkin.dll
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.csprojAssemblyReference.cache
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.Form1.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddDevice.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddGroup.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddOrderProd.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddPlant.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddProduct.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddProductionLine.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddType.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddUser.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmAddUserGroup.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmConnection.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmDevices.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmDevicesGroups.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmDevicesTypes.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmEditParameter.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmForgotPassword.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmLogin.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmMain.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmManualPrint.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmOrderAssignation.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmOrderProduction.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmParameters.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmParent.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmPlants.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmProductionLines.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmProducts.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmSchedule.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmSubMain.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmUserGroup.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.frmUsers.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.Properties.Resources.resources
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.csproj.GenerateResource.cache
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.csproj.CoreCompileInputs.cache
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.csproj.CopyComplete
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.exe
+D:\UBS USERS\ALONSO\PROYECTOS\LABMAN\LabMan\LabMan\obj\Debug\LabMan.pdb
