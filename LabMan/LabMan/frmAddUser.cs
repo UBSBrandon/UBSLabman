@@ -36,8 +36,6 @@ namespace LabMan
                 form.WindowState = FormWindowState.Normal;
                 this.Dispose();
                 form.Show();
-                //Holi
-                //Otro holi
             }
         }
 
@@ -57,6 +55,8 @@ namespace LabMan
                 par.SecretAsk = selSecretAskId.Text;
                 par.TransactionID = "I";
                 //par.CUserId;
+
+                ClearForm();
             }
             else
             {
@@ -77,5 +77,16 @@ namespace LabMan
                 btnAddUser.Enabled = true;
             }
         }
+
+        private void ClearForm()
+        {
+            txtUserId.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtPassword.Text = "";
+            txtPasswordConfirm.Text = "";
+            txtSecretAnswer.Text = "";
+        }
+
     }
 }
