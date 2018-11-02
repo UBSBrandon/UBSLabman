@@ -20,7 +20,6 @@ namespace LabMan
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme((MaterialSkin.Primary)7000, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, MaterialSkin.Accent.Orange700, MaterialSkin.TextShade.WHITE);
-            //wero
         }
 
         private void btnBack_Click(object sender, EventArgs e)
