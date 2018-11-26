@@ -59,8 +59,6 @@
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.tORDERPRODUCTIONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uBSLABMN_MXOrderProd = new LabMan.UBSLABMN_MXOrderProd();
-            this.tORDERPRODUCTIONTableAdapter = new LabMan.UBSLABMN_MXOrderProdTableAdapters.TORDERPRODUCTIONTableAdapter();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel1.SuspendLayout();
@@ -73,7 +71,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrdersProduction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tORDERPRODUCTIONBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXOrderProd)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -292,16 +289,12 @@
             // tORDERPRODUCTIONBindingSource
             // 
             this.tORDERPRODUCTIONBindingSource.DataMember = "TORDERPRODUCTION";
-            this.tORDERPRODUCTIONBindingSource.DataSource = this.uBSLABMN_MXOrderProd;
             // 
             // uBSLABMN_MXOrderProd
             // 
-            this.uBSLABMN_MXOrderProd.DataSetName = "UBSLABMN_MXOrderProd";
-            this.uBSLABMN_MXOrderProd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tORDERPRODUCTIONTableAdapter
             // 
-            this.tORDERPRODUCTIONTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewImageColumn1
             // 
@@ -342,7 +335,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdOrdersProduction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tORDERPRODUCTIONBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXOrderProd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,9 +351,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView grdOrdersProduction;
-        private UBSLABMN_MXOrderProd uBSLABMN_MXOrderProd;
         private System.Windows.Forms.BindingSource tORDERPRODUCTIONBindingSource;
-        private UBSLABMN_MXOrderProdTableAdapters.TORDERPRODUCTIONTableAdapter tORDERPRODUCTIONTableAdapter;
         private System.Windows.Forms.Button btnAddOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn oRDERIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pLANTNUMBERDataGridViewTextBoxColumn;

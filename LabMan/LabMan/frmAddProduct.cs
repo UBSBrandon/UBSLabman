@@ -13,18 +13,21 @@ namespace LabMan
 {
     public partial class frmAddProduct : MaterialForm
     {
-        public frmAddProduct()
+        String IdProduct;
+        public frmAddProduct(String Id)
         {
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme((MaterialSkin.Primary)7000, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, MaterialSkin.Accent.Orange700, MaterialSkin.TextShade.WHITE);
+            IdProduct = Id;
+            numMaterialCode.Value = int.Parse(IdProduct);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var type = Type.GetType("LabMan.frmOrderProduction");
+            var type = Type.GetType("LabMan.frmProducts");
             var form = Activator.CreateInstance(type) as Form;
             if (form != null)
             {

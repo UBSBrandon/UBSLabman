@@ -39,6 +39,7 @@
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -233,18 +234,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UBSLABMN_MXDataSet.Designer.cs">
+    <Compile Include="UBSLABMN_MXTProd.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UBSLABMN_MXDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UBSLABMN_MXOrderProd.cs">
-      <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UBSLABMN_MXOrderProd.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
+      <DependentUpon>UBSLABMN_MXTProd.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -356,27 +349,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="UBSLABMN_MXDataSet.xsc">
-      <DependentUpon>UBSLABMN_MXDataSet.xsd</DependentUpon>
+    <None Include="UBSLABMN_MXTProd.xsc">
+      <DependentUpon>UBSLABMN_MXTProd.xsd</DependentUpon>
     </None>
-    <None Include="UBSLABMN_MXDataSet.xsd">
+    <None Include="UBSLABMN_MXTProd.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UBSLABMN_MXDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>UBSLABMN_MXTProd.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="UBSLABMN_MXDataSet.xss">
-      <DependentUpon>UBSLABMN_MXDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="UBSLABMN_MXOrderProd.xsc">
-      <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
-    </None>
-    <None Include="UBSLABMN_MXOrderProd.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UBSLABMN_MXOrderProd.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UBSLABMN_MXOrderProd.xss">
-      <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
+    <None Include="UBSLABMN_MXTProd.xss">
+      <DependentUpon>UBSLABMN_MXTProd.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -37,7 +40,9 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddProduct = new System.Windows.Forms.Button();
-            this.grdOrdersProduction = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.mATNRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mAKTXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qUANTITYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,17 +52,13 @@
             this.cREATIONUSERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lASTCHANGEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lASTCHANGEUSERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.tPRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uBSLABMN_MXDataSet = new LabMan.UBSLABMN_MXDataSet();
+            this.uBSLABMN_MXTProd = new LabMan.UBSLABMN_MXTProd();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.uBSLABMN_MXOrderProd = new LabMan.UBSLABMN_MXOrderProd();
-            this.uBSLABMNMXOrderProdBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tPRODUCTTableAdapter = new LabMan.UBSLABMN_MXDataSetTableAdapters.TPRODUCTTableAdapter();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tPRODUCTTableAdapter = new LabMan.UBSLABMN_MXTProdTableAdapters.TPRODUCTTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -65,12 +66,10 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdOrdersProduction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tPRODUCTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXTProd)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXOrderProd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMNMXOrderProdBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -138,7 +137,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.grdOrdersProduction, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Inch);
             this.tableLayoutPanel4.ForeColor = System.Drawing.Color.White;
@@ -198,13 +197,31 @@
             this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // grdOrdersProduction
+            // dataGridView1
             // 
-            this.grdOrdersProduction.AllowUserToAddRows = false;
-            this.grdOrdersProduction.AutoGenerateColumns = false;
-            this.grdOrdersProduction.BackgroundColor = System.Drawing.Color.White;
-            this.grdOrdersProduction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdOrdersProduction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Editar,
+            this.Eliminar,
             this.mATNRDataGridViewTextBoxColumn,
             this.mAKTXDataGridViewTextBoxColumn,
             this.qUANTITYDataGridViewTextBoxColumn,
@@ -213,93 +230,128 @@
             this.cREATIONDATEDataGridViewTextBoxColumn,
             this.cREATIONUSERDataGridViewTextBoxColumn,
             this.lASTCHANGEDATEDataGridViewTextBoxColumn,
-            this.lASTCHANGEUSERDataGridViewTextBoxColumn,
-            this.Edit,
-            this.Delete});
-            this.grdOrdersProduction.DataSource = this.tPRODUCTBindingSource;
-            this.grdOrdersProduction.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOrdersProduction.Location = new System.Drawing.Point(204, 71);
-            this.grdOrdersProduction.Name = "grdOrdersProduction";
-            this.grdOrdersProduction.Size = new System.Drawing.Size(598, 312);
-            this.grdOrdersProduction.TabIndex = 1;
+            this.lASTCHANGEUSERDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tPRODUCTBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.dataGridView1.Location = new System.Drawing.Point(204, 71);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(598, 312);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabStop = false;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Editar
+            // 
+            this.Editar.Frozen = true;
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::LabMan.Properties.Resources.iconEdit;
+            this.Editar.MinimumWidth = 45;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.Width = 45;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Frozen = true;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::LabMan.Properties.Resources.iconDelete;
+            this.Eliminar.MinimumWidth = 50;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Eliminar.ToolTipText = "Eliminar";
+            this.Eliminar.Width = 50;
             // 
             // mATNRDataGridViewTextBoxColumn
             // 
             this.mATNRDataGridViewTextBoxColumn.DataPropertyName = "MATNR";
+            this.mATNRDataGridViewTextBoxColumn.Frozen = true;
             this.mATNRDataGridViewTextBoxColumn.HeaderText = "MATNR";
             this.mATNRDataGridViewTextBoxColumn.Name = "mATNRDataGridViewTextBoxColumn";
+            this.mATNRDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mAKTXDataGridViewTextBoxColumn
             // 
             this.mAKTXDataGridViewTextBoxColumn.DataPropertyName = "MAKTX";
             this.mAKTXDataGridViewTextBoxColumn.HeaderText = "MAKTX";
             this.mAKTXDataGridViewTextBoxColumn.Name = "mAKTXDataGridViewTextBoxColumn";
+            this.mAKTXDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // qUANTITYDataGridViewTextBoxColumn
             // 
             this.qUANTITYDataGridViewTextBoxColumn.DataPropertyName = "QUANTITY";
             this.qUANTITYDataGridViewTextBoxColumn.HeaderText = "QUANTITY";
             this.qUANTITYDataGridViewTextBoxColumn.Name = "qUANTITYDataGridViewTextBoxColumn";
+            this.qUANTITYDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // uOMDataGridViewTextBoxColumn
             // 
             this.uOMDataGridViewTextBoxColumn.DataPropertyName = "UOM";
             this.uOMDataGridViewTextBoxColumn.HeaderText = "UOM";
             this.uOMDataGridViewTextBoxColumn.Name = "uOMDataGridViewTextBoxColumn";
+            this.uOMDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tIMEUNITDataGridViewTextBoxColumn
             // 
             this.tIMEUNITDataGridViewTextBoxColumn.DataPropertyName = "TIMEUNIT";
             this.tIMEUNITDataGridViewTextBoxColumn.HeaderText = "TIMEUNIT";
             this.tIMEUNITDataGridViewTextBoxColumn.Name = "tIMEUNITDataGridViewTextBoxColumn";
+            this.tIMEUNITDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cREATIONDATEDataGridViewTextBoxColumn
             // 
             this.cREATIONDATEDataGridViewTextBoxColumn.DataPropertyName = "CREATIONDATE";
             this.cREATIONDATEDataGridViewTextBoxColumn.HeaderText = "CREATIONDATE";
             this.cREATIONDATEDataGridViewTextBoxColumn.Name = "cREATIONDATEDataGridViewTextBoxColumn";
+            this.cREATIONDATEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cREATIONUSERDataGridViewTextBoxColumn
             // 
             this.cREATIONUSERDataGridViewTextBoxColumn.DataPropertyName = "CREATIONUSER";
             this.cREATIONUSERDataGridViewTextBoxColumn.HeaderText = "CREATIONUSER";
             this.cREATIONUSERDataGridViewTextBoxColumn.Name = "cREATIONUSERDataGridViewTextBoxColumn";
+            this.cREATIONUSERDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lASTCHANGEDATEDataGridViewTextBoxColumn
             // 
             this.lASTCHANGEDATEDataGridViewTextBoxColumn.DataPropertyName = "LASTCHANGEDATE";
             this.lASTCHANGEDATEDataGridViewTextBoxColumn.HeaderText = "LASTCHANGEDATE";
             this.lASTCHANGEDATEDataGridViewTextBoxColumn.Name = "lASTCHANGEDATEDataGridViewTextBoxColumn";
+            this.lASTCHANGEDATEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lASTCHANGEUSERDataGridViewTextBoxColumn
             // 
             this.lASTCHANGEUSERDataGridViewTextBoxColumn.DataPropertyName = "LASTCHANGEUSER";
             this.lASTCHANGEUSERDataGridViewTextBoxColumn.HeaderText = "LASTCHANGEUSER";
             this.lASTCHANGEUSERDataGridViewTextBoxColumn.Name = "lASTCHANGEUSERDataGridViewTextBoxColumn";
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Editar";
-            this.Edit.Image = global::LabMan.Properties.Resources.iconEdit;
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Eliminar";
-            this.Delete.Image = global::LabMan.Properties.Resources.iconDelete;
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.lASTCHANGEUSERDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tPRODUCTBindingSource
             // 
             this.tPRODUCTBindingSource.DataMember = "TPRODUCT";
-            this.tPRODUCTBindingSource.DataSource = this.uBSLABMN_MXDataSet;
+            this.tPRODUCTBindingSource.DataSource = this.uBSLABMN_MXTProd;
             // 
-            // uBSLABMN_MXDataSet
+            // uBSLABMN_MXTProd
             // 
-            this.uBSLABMN_MXDataSet.DataSetName = "UBSLABMN_MXDataSet";
-            this.uBSLABMN_MXDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.uBSLABMN_MXTProd.DataSetName = "UBSLABMN_MXTProd";
+            this.uBSLABMN_MXTProd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel3
             // 
@@ -334,20 +386,6 @@
             this.label1.Text = "Listado de productos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // uBSLABMN_MXOrderProd
-            // 
-            this.uBSLABMN_MXOrderProd.DataSetName = "UBSLABMN_MXOrderProd";
-            this.uBSLABMN_MXOrderProd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uBSLABMNMXOrderProdBindingSource
-            // 
-            this.uBSLABMNMXOrderProdBindingSource.DataSource = this.uBSLABMN_MXOrderProd;
-            this.uBSLABMNMXOrderProdBindingSource.Position = 0;
-            // 
-            // tPRODUCTTableAdapter
-            // 
-            this.tPRODUCTTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.HeaderText = "Editar";
@@ -361,6 +399,10 @@
             this.dataGridViewImageColumn2.Image = global::LabMan.Properties.Resources.iconDelete;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tPRODUCTTableAdapter
+            // 
+            this.tPRODUCTTableAdapter.ClearBeforeFill = true;
             // 
             // frmProducts
             // 
@@ -383,13 +425,11 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdOrdersProduction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tPRODUCTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXTProd)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXOrderProd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMNMXOrderProdBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,15 +445,16 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddProduct;
-        private System.Windows.Forms.DataGridView grdOrdersProduction;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private UBSLABMN_MXOrderProd uBSLABMN_MXOrderProd;
-        private System.Windows.Forms.BindingSource uBSLABMNMXOrderProdBindingSource;
-        private UBSLABMN_MXDataSet uBSLABMN_MXDataSet;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private UBSLABMN_MXTProd uBSLABMN_MXTProd;
         private System.Windows.Forms.BindingSource tPRODUCTBindingSource;
-        private UBSLABMN_MXDataSetTableAdapters.TPRODUCTTableAdapter tPRODUCTTableAdapter;
+        private UBSLABMN_MXTProdTableAdapters.TPRODUCTTableAdapter tPRODUCTTableAdapter;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn mATNRDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAKTXDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qUANTITYDataGridViewTextBoxColumn;
@@ -423,8 +464,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cREATIONUSERDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lASTCHANGEDATEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lASTCHANGEUSERDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }

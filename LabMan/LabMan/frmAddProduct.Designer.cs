@@ -326,7 +326,6 @@
             this.numMaterialCode.TabIndex = 4;
             this.numMaterialCode.TabStop = false;
             this.numMaterialCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numMaterialCode.ThousandsSeparator = true;
             // 
             // selMeasureUnit
             // 
