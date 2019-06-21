@@ -36,6 +36,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.frmPanel2 = new System.Windows.Forms.Panel();
+            this.lbnpwd2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.selPlant = new System.Windows.Forms.ComboBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -50,6 +51,7 @@
             this.btnAddUser = new System.Windows.Forms.Button();
             this.selGroupId = new System.Windows.Forms.ComboBox();
             this.frmPanel1 = new System.Windows.Forms.Panel();
+            this.lbnpwd1 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -182,6 +184,7 @@
             // frmPanel2
             // 
             this.frmPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.frmPanel2.Controls.Add(this.lbnpwd2);
             this.frmPanel2.Controls.Add(this.pictureBox5);
             this.frmPanel2.Controls.Add(this.selPlant);
             this.frmPanel2.Controls.Add(this.pictureBox8);
@@ -200,6 +203,20 @@
             this.frmPanel2.Name = "frmPanel2";
             this.frmPanel2.Size = new System.Drawing.Size(247, 401);
             this.frmPanel2.TabIndex = 1;
+            // 
+            // lbnpwd2
+            // 
+            this.lbnpwd2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbnpwd2.AutoSize = true;
+            this.lbnpwd2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnpwd2.ForeColor = System.Drawing.Color.Red;
+            this.lbnpwd2.Location = new System.Drawing.Point(44, 218);
+            this.lbnpwd2.MaximumSize = new System.Drawing.Size(148, 18);
+            this.lbnpwd2.Name = "lbnpwd2";
+            this.lbnpwd2.Size = new System.Drawing.Size(120, 15);
+            this.lbnpwd2.TabIndex = 27;
+            this.lbnpwd2.Text = "Verifique contraseña";
+            this.lbnpwd2.Visible = false;
             // 
             // pictureBox5
             // 
@@ -285,7 +302,6 @@
             this.txtPasswordConfirm.Size = new System.Drawing.Size(161, 18);
             this.txtPasswordConfirm.TabIndex = 16;
             this.txtPasswordConfirm.TabStop = false;
-            this.txtPasswordConfirm.Text = "Dummie Text";
             // 
             // txtLastName
             // 
@@ -302,7 +318,6 @@
             this.txtLastName.Size = new System.Drawing.Size(161, 18);
             this.txtLastName.TabIndex = 15;
             this.txtLastName.TabStop = false;
-            this.txtLastName.Text = "Dummie Text";
             // 
             // pictureBox6
             // 
@@ -365,7 +380,6 @@
             this.btnAddUser.BackgroundImage = global::LabMan.Properties.Resources.btnAcceptPress;
             this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddUser.Enabled = false;
             this.btnAddUser.FlatAppearance.BorderSize = 0;
             this.btnAddUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -379,6 +393,7 @@
             this.btnAddUser.TabStop = false;
             this.btnAddUser.Text = "Agregar";
             this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // selGroupId
             // 
@@ -399,6 +414,7 @@
             // frmPanel1
             // 
             this.frmPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.frmPanel1.Controls.Add(this.lbnpwd1);
             this.frmPanel1.Controls.Add(this.pictureBox10);
             this.frmPanel1.Controls.Add(this.pictureBox4);
             this.frmPanel1.Controls.Add(this.pictureBox3);
@@ -419,6 +435,20 @@
             this.frmPanel1.Name = "frmPanel1";
             this.frmPanel1.Size = new System.Drawing.Size(247, 401);
             this.frmPanel1.TabIndex = 0;
+            // 
+            // lbnpwd1
+            // 
+            this.lbnpwd1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbnpwd1.AutoSize = true;
+            this.lbnpwd1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnpwd1.ForeColor = System.Drawing.Color.Red;
+            this.lbnpwd1.Location = new System.Drawing.Point(47, 218);
+            this.lbnpwd1.MaximumSize = new System.Drawing.Size(148, 18);
+            this.lbnpwd1.Name = "lbnpwd1";
+            this.lbnpwd1.Size = new System.Drawing.Size(120, 15);
+            this.lbnpwd1.TabIndex = 26;
+            this.lbnpwd1.Text = "Verifique contraseña";
+            this.lbnpwd1.Visible = false;
             // 
             // pictureBox10
             // 
@@ -500,7 +530,6 @@
             this.txtSecretAnswer.Size = new System.Drawing.Size(161, 18);
             this.txtSecretAnswer.TabIndex = 19;
             this.txtSecretAnswer.TabStop = false;
-            this.txtSecretAnswer.Text = "Dummie Text";
             // 
             // selSecretAskId
             // 
@@ -534,7 +563,6 @@
             this.txtPassword.Size = new System.Drawing.Size(161, 18);
             this.txtPassword.TabIndex = 15;
             this.txtPassword.TabStop = false;
-            this.txtPassword.Text = "Dummie Text";
             // 
             // txtFirstName
             // 
@@ -551,7 +579,6 @@
             this.txtFirstName.Size = new System.Drawing.Size(161, 18);
             this.txtFirstName.TabIndex = 14;
             this.txtFirstName.TabStop = false;
-            this.txtFirstName.Text = "Dummie Text";
             // 
             // pictureBox1
             // 
@@ -633,7 +660,6 @@
             this.txtUserId.Size = new System.Drawing.Size(161, 18);
             this.txtUserId.TabIndex = 0;
             this.txtUserId.TabStop = false;
-            this.txtUserId.Text = "Dummie Text";
             // 
             // lblFormTitle
             // 
@@ -727,5 +753,7 @@
         private System.Windows.Forms.Label lblOrderNumber;
         private System.Windows.Forms.TextBox txtUserId;
         private System.Windows.Forms.Label lblFormTitle;
+        private System.Windows.Forms.Label lbnpwd2;
+        private System.Windows.Forms.Label lbnpwd1;
     }
 }

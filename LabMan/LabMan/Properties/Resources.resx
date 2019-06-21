@@ -124,6 +124,9 @@
   <data name="LOGOSINLETRAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOSINLETRAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btnAddPress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnAddPress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnOrderProduction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnOrderProduction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,14 +148,11 @@
   <data name="btnSchedule_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnSchedule_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnOrderProduction1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnOrderProduction1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnSendPress" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnSendPress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btnPlants_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnPlants_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Editv2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Editv2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnProducts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnProducts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +172,8 @@
   <data name="left-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\left-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconCalendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconCalendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnDevices" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnDevices.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnManualPrint_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnManualPrint_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,6 +184,9 @@
   <data name="btnPlants" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnPlants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconClock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconClock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnDevicesTypes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnDevicesTypes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -192,6 +195,9 @@
   </data>
   <data name="iconOk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconOk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnOrderProduction1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnOrderProduction1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnAcceptPress" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnAcceptPress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,14 +214,17 @@
   <data name="btnDevicesGroups_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnDevicesGroups_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="APL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\APL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnDevicesGroups" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnDevicesGroups.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnAddPress" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnAddPress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnSendPress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSendPress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconError" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,17 +241,14 @@
   <data name="btnParameters_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnParameters_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="APL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\APL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconCalendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCalendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnSend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnSend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnConnection" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnConnection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnDevices" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnDevices.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,7 +268,7 @@
   <data name="btnDevices_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnDevices_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconClock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconClock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

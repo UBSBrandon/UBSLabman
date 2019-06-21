@@ -18,6 +18,7 @@ namespace LabMan
     {
         string message = "No se puso establecer conexión a la base de datos.";
         string connStrg = ConfigurationManager.ConnectionStrings["LabMan.Properties.Settings.UBSLABMN_MXConnectionString"].ConnectionString;
+        string _Order = frmOrderProduction.GetOrder;
         public frmAddOrderProd()
         {
             InitializeComponent();
@@ -25,6 +26,28 @@ namespace LabMan
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme((MaterialSkin.Primary)7000, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, MaterialSkin.Accent.Orange700, MaterialSkin.TextShade.WHITE);
+            //this.selPlant.SelectedIndexChanged += new System.EventHandler(this.selWorkcenter_SelectedIndexChanged);
+            //this.selProduct_SelectedIndexChanged();
+            if (!string.IsNullOrEmpty(_Order))
+            {
+                //this.Load += new EventHandler(LoadOrderEvent);
+                this.LoadOrderEvent(_Order);
+                this.txtOrderNumber.Enabled = false;
+                this.txtOrderNumber.Text = _Order.ToString();
+                lblFormTitle.Text = "Editar Orden de Producción";
+                this.btnAddOrder.Visible = false;
+                this.btnSave.Visible = true;
+            }
+            else
+            {
+                this.btnAddOrder.Visible = true;
+                this.btnSave.Visible = false;
+            }
+            this.selPlant.SelectedIndexChanged -= new System.EventHandler(this.selWorkcenter_SelectedIndexChanged);
+            this.selProduct_SelectedIndexChanged();
+            //this.selPlant.Click += new EventHandler(this.selPlant_SelectedIndexChanged);
+            this.selPlant.Click += new System.EventHandler(this.selPlant_SelectedIndexChanged);
+            this.selWorkcenter.Click += new System.EventHandler(this.selWorkcenter_SelectedIndexChanged);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -44,7 +67,6 @@ namespace LabMan
             }
         }
 
-
         /// <summary>
         /// Method to built select item 
         /// </summary>
@@ -59,6 +81,7 @@ namespace LabMan
             SqlCommand commd = new SqlCommand("Sp_SelectLineas", conn) { CommandType = CommandType.StoredProcedure };
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(commd);
+            selPlant.Text = "";
             selPlant.Items.Clear();
             try
             {
@@ -68,8 +91,9 @@ namespace LabMan
                     selPlant.Items.Add("Sin datos...");
                 else
                 {
-                    selPlant.Items.Add("Seleccione...");
-                    selPlant.SelectedText = selPlant.Items[0].ToString();
+                    //selPlant.Text = "Seleccione...";
+                    //selPlant.Items.Add("Seleccione...");
+                    //selPlant.SelectedText = selPlant.Items[0].ToString();
                     foreach (DataRow row in dt.Rows)
                         selPlant.Items.Add(row.ItemArray[1]);
                 }
@@ -85,7 +109,7 @@ namespace LabMan
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void selProduct_SelectedIndexChanged(object sender, EventArgs e)
+        private void selProduct_SelectedIndexChanged()
         {
             SqlConnection conn = new SqlConnection(connStrg);
             if (conn == null)
@@ -93,7 +117,7 @@ namespace LabMan
             SqlCommand commd = new SqlCommand("Sp_SelectProducts", conn) { CommandType = CommandType.StoredProcedure};
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(commd);
-            selProduct.Text = "";
+            //selProduct.Text = "";
             selProduct.Items.Clear();
             try
             {
@@ -102,8 +126,8 @@ namespace LabMan
                 if (dt.Rows.Count == 0)
                     selProduct.Items.Add("Sin datos...");
                 else {
-                    selProduct.Items.Add("Seleccione...");
-                    selProduct.SelectedText = selProduct.Items[0].ToString();
+                    //selProduct.Items.Add("Seleccione...");
+                    //selProduct.SelectedText = selProduct.Items[0].ToString();
                     foreach (DataRow row in dt.Rows)
                         selProduct.Items.Add(row.ItemArray[1]);
                 }
@@ -132,6 +156,8 @@ namespace LabMan
             {
                 conn.Open();
                 adapter.Fill(dt);
+                if (selPlant.Items.Count == 0)
+                    return;
                 var item= selPlant.SelectedItem.ToString();
                 item = item.Substring(0,4);
                 var query = from i in dt.AsEnumerable() where i.ItemArray[1].ToString() == item.Trim() select i; // LinQ
@@ -143,8 +169,8 @@ namespace LabMan
                 if (copyData.Rows.Count == 0)
                     selWorkcenter.Items.Add("Sin datos...");
                 else {
-                    selWorkcenter.Items.Add("Seleccione...");
-                    selWorkcenter.SelectedText = selWorkcenter.Items[0].ToString();
+                    //selWorkcenter.Items.Add("Seleccione...");
+                    //selWorkcenter.SelectedText = selWorkcenter.Items[0].ToString();
                     foreach (DataRow row in copyData.Rows)
                         selWorkcenter.Items.Add(row.ItemArray[2]);
                 }
@@ -237,5 +263,47 @@ namespace LabMan
             }
         }
 
+        private void lblFormTitle_Click(object sender, EventArgs e)
+        {
+        }
+        public void LoadOrderEvent(string orderForm) {
+            SqlConnection conn = new SqlConnection(connStrg);
+            object _tb = "TORDERPRODUCTION";
+            if (conn == null)
+                throw new Exception(message);
+            SqlCommand commd = new SqlCommand("Sp_GetCriteria", conn) { CommandType = CommandType.StoredProcedure };
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(commd);
+            try
+            {
+                conn.Open();
+                commd.Parameters.Add("Table", SqlDbType.VarChar, 50);
+                commd.Parameters["Table"].Value = _tb.ToString();
+                commd.ExecuteNonQuery();
+                adapter.Fill(dt);
+
+                var queryLinQ = from i in dt.AsEnumerable()
+                                        where i.ItemArray[0].ToString() == orderForm
+                                            select i; // LinQ
+                DataTable copyData = queryLinQ.CopyToDataTable(); // LinQ data copy to DataTable 
+                this.selPlant.Text = "";
+                this.selPlant.Text = copyData.Rows[0].ItemArray[1].ToString(); // Plant number
+                this.selProduct.Text = "";
+                this.selProduct.Text = copyData.Rows[0].ItemArray[2].ToString(); // Material
+                this.selWorkcenter.Text = copyData.Rows[0].ItemArray[3].ToString(); // Linea
+                this.numPlannedQty.Value = int.Parse(copyData.Rows[0].ItemArray[5].ToString()); // Cantidad planeada
+                this.dpPlannedDate.Text = "";
+                dpPlannedDate.Value = new DateTime(DateTime.Parse(copyData.Rows[0].ItemArray[7].ToString()).Year, DateTime.Parse(copyData.Rows[0].ItemArray[7].ToString()).Month, DateTime.Parse(copyData.Rows[0].ItemArray[7].ToString()).Day); // Fecha planeada
+                //this.dpPlannedDate.Value.Refresh();
+                
+                this.numQtyXPallet.Value = int.Parse(copyData.Rows[0].ItemArray[8].ToString()); // Cantidad x pallet
+
+            }
+            catch (Exception ex) { throw new Exception(ex.Message); }
+            conn.Close();
+            conn.Dispose();
+        }
     }
+
+
 }

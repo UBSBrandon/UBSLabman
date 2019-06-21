@@ -38,6 +38,9 @@
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -233,6 +236,15 @@
     <Compile Include="frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenericConnection.cs" />
+    <Compile Include="OP.cs">
+      <DependentUpon>OP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UBSLABMN_MXDataSet.Designer.cs">
@@ -244,6 +256,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UBSLABMN_MXDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UBSLABMN_MXDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UBSLABMN_MXDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UBSLABMN_MXDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UBSLABMN_MXDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UBSLABMN_MXDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UBSLABMN_MXDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="UBSLABMN_MXOrderProd.cs">
       <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
@@ -348,6 +375,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="OP.xsc">
+      <DependentUpon>OP.xsd</DependentUpon>
+    </None>
+    <None Include="OP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OP.xss">
+      <DependentUpon>OP.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -385,6 +423,39 @@
     <None Include="UBSLABMN_MXDataSet1.xss">
       <DependentUpon>UBSLABMN_MXDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="UBSLABMN_MXDataSet2.xsc">
+      <DependentUpon>UBSLABMN_MXDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UBSLABMN_MXDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UBSLABMN_MXDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UBSLABMN_MXDataSet2.xss">
+      <DependentUpon>UBSLABMN_MXDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UBSLABMN_MXDataSet3.xsc">
+      <DependentUpon>UBSLABMN_MXDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UBSLABMN_MXDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UBSLABMN_MXDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UBSLABMN_MXDataSet3.xss">
+      <DependentUpon>UBSLABMN_MXDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UBSLABMN_MXDataSet4.xsc">
+      <DependentUpon>UBSLABMN_MXDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UBSLABMN_MXDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UBSLABMN_MXDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UBSLABMN_MXDataSet4.xss">
+      <DependentUpon>UBSLABMN_MXDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="UBSLABMN_MXOrderProd.xsc">
       <DependentUpon>UBSLABMN_MXOrderProd.xsd</DependentUpon>
     </None>
@@ -398,7 +469,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGOSINLETRAS.png" />
@@ -552,6 +625,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\Editv2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

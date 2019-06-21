@@ -426,83 +426,26 @@
   <data name="tableLayoutPanel5.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panel1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Absolute,190,Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="oRDERIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>ORDERID</value>
-  </data>
-  <data name="oRDERIDDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="pLANTNUMBERDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>PLANTNUMBER</value>
-  </data>
-  <data name="pLANTNUMBERDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mATNRDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Número de Producto</value>
-  </data>
-  <data name="wORKCENTERIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Línea</value>
-  </data>
-  <data name="pLANNEDQTYDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Cantidad Planeada</value>
-  </data>
-  <data name="rEALQTYDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Cantidad Real</value>
-  </data>
-  <data name="pLANNEDDATEDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Fecha Planeada</value>
-  </data>
-  <data name="rEALDATEDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Fecha Real</value>
-  </data>
-  <data name="qTYXPALLETDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Cajas por Pallet</value>
-  </data>
-  <data name="sTATUSDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Estatus</value>
-  </data>
-  <data name="bATCHDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Lote</value>
-  </data>
-  <data name="cREATIONDATEDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>CREATIONDATE</value>
-  </data>
-  <data name="cREATIONDATEDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cREATIONUSERDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Creada por:</value>
-  </data>
-  <data name="cREATIONUSERDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lASTCHANGEDATEDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Ultima Modificación</value>
-  </data>
-  <data name="lASTCHANGEUSERDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Ultima Modificación</value>
-  </data>
-  <metadata name="Edit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Editar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Edit.HeaderText" xml:space="preserve">
+  <data name="Editar.HeaderText" xml:space="preserve">
     <value>Editar</value>
   </data>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="Editar.ToolTipText" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Editar.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="Eliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Delete.HeaderText" xml:space="preserve">
+  <data name="Eliminar.HeaderText" xml:space="preserve">
     <value>Eliminar</value>
   </data>
-  <metadata name="tORDERPRODUCTIONBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 17</value>
-  </metadata>
-  <metadata name="uBSLABMN_MXOrderProd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="grdOrdersProduction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="Eliminar.Width" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="grdOrdersProduction.Location" type="System.Drawing.Point, System.Drawing">
     <value>207, 77</value>
@@ -511,7 +454,7 @@
     <value>608, 339</value>
   </data>
   <data name="grdOrdersProduction.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;grdOrdersProduction.Name" xml:space="preserve">
     <value>grdOrdersProduction</value>
@@ -558,14 +501,17 @@
   <data name="tableLayoutPanel4.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel5" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="grdOrdersProduction" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,Percent,60,Percent,20" /&gt;&lt;Rows Styles="Percent,15,Percent,70,Percent,15" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <metadata name="tORDERPRODUCTIONTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>461, 17</value>
-  </metadata>
   <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
     <value>Editar</value>
   </data>
+  <data name="dataGridViewImageColumn1.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
   <data name="dataGridViewImageColumn2.HeaderText" xml:space="preserve">
     <value>Eliminar</value>
+  </data>
+  <data name="dataGridViewImageColumn2.Width" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -582,125 +528,17 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Órdenes de Producción</value>
   </data>
-  <data name="&gt;&gt;oRDERIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>oRDERIDDataGridViewTextBoxColumn</value>
+  <data name="&gt;&gt;Editar.Name" xml:space="preserve">
+    <value>Editar</value>
   </data>
-  <data name="&gt;&gt;oRDERIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pLANTNUMBERDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>pLANTNUMBERDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;pLANTNUMBERDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mATNRDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>mATNRDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;mATNRDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;wORKCENTERIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>wORKCENTERIDDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;wORKCENTERIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pLANNEDQTYDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>pLANNEDQTYDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;pLANNEDQTYDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rEALQTYDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>rEALQTYDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;rEALQTYDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pLANNEDDATEDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>pLANNEDDATEDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;pLANNEDDATEDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rEALDATEDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>rEALDATEDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;rEALDATEDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;qTYXPALLETDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>qTYXPALLETDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;qTYXPALLETDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sTATUSDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>sTATUSDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;sTATUSDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bATCHDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>bATCHDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;bATCHDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cREATIONDATEDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cREATIONDATEDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cREATIONDATEDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cREATIONUSERDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cREATIONUSERDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cREATIONUSERDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lASTCHANGEDATEDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>lASTCHANGEDATEDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;lASTCHANGEDATEDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lASTCHANGEUSERDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>lASTCHANGEUSERDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;lASTCHANGEUSERDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Edit.Name" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="&gt;&gt;Edit.Type" xml:space="preserve">
+  <data name="&gt;&gt;Editar.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Delete.Name" xml:space="preserve">
-    <value>Delete</value>
+  <data name="&gt;&gt;Eliminar.Name" xml:space="preserve">
+    <value>Eliminar</value>
   </data>
-  <data name="&gt;&gt;Delete.Type" xml:space="preserve">
+  <data name="&gt;&gt;Eliminar.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tORDERPRODUCTIONBindingSource.Name" xml:space="preserve">
-    <value>tORDERPRODUCTIONBindingSource</value>
-  </data>
-  <data name="&gt;&gt;tORDERPRODUCTIONBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;uBSLABMN_MXOrderProd.Name" xml:space="preserve">
-    <value>uBSLABMN_MXOrderProd</value>
-  </data>
-  <data name="&gt;&gt;uBSLABMN_MXOrderProd.Type" xml:space="preserve">
-    <value>LabMan.UBSLABMN_MXOrderProd, UBSLABMN_MXOrderProd.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;tORDERPRODUCTIONTableAdapter.Name" xml:space="preserve">
-    <value>tORDERPRODUCTIONTableAdapter</value>
-  </data>
-  <data name="&gt;&gt;tORDERPRODUCTIONTableAdapter.Type" xml:space="preserve">
-    <value>LabMan.UBSLABMN_MXOrderProdTableAdapters.TORDERPRODUCTIONTableAdapter, UBSLABMN_MXOrderProd.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dataGridViewImageColumn1.Name" xml:space="preserve">
     <value>dataGridViewImageColumn1</value>

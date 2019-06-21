@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -36,11 +39,22 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddGroup = new System.Windows.Forms.Button();
-            this.grdOrdersProduction = new System.Windows.Forms.DataGridView();
+            this.grdGroupDevices = new System.Windows.Forms.DataGridView();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dEVICEGROUPIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEVICEGROUPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cREATIONDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cREATIONUSERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tDEVICEGROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uBSLABMN_MXDataSet3 = new LabMan.UBSLABMN_MXDataSet3();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.uBSLABMN_MXDataSet = new LabMan.UBSLABMN_MXDataSet();
+            this.uBSLABMNMXDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uBSLABMN_MXDataSet2 = new LabMan.UBSLABMN_MXDataSet2();
+            this.uBSLABMNMXDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tDEVICEGROUPTableAdapter = new LabMan.UBSLABMN_MXDataSet3TableAdapters.TDEVICEGROUPTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -48,8 +62,14 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdOrdersProduction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdGroupDevices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tDEVICEGROUPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet3)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMNMXDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMNMXDataSet2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -117,7 +137,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.grdOrdersProduction, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.grdGroupDevices, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Inch);
             this.tableLayoutPanel4.ForeColor = System.Drawing.Color.White;
@@ -177,33 +197,100 @@
             this.btnAddGroup.UseVisualStyleBackColor = false;
             this.btnAddGroup.Click += new System.EventHandler(this.btnAddGroup_Click);
             // 
-            // grdOrdersProduction
+            // grdGroupDevices
             // 
-            this.grdOrdersProduction.AllowUserToAddRows = false;
-            this.grdOrdersProduction.BackgroundColor = System.Drawing.Color.White;
-            this.grdOrdersProduction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdOrdersProduction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdGroupDevices.AllowUserToAddRows = false;
+            this.grdGroupDevices.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.grdGroupDevices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdGroupDevices.AutoGenerateColumns = false;
+            this.grdGroupDevices.BackgroundColor = System.Drawing.Color.White;
+            this.grdGroupDevices.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdGroupDevices.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.grdGroupDevices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.grdGroupDevices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Edit,
-            this.Delete});
-            this.grdOrdersProduction.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOrdersProduction.Location = new System.Drawing.Point(207, 77);
-            this.grdOrdersProduction.Name = "grdOrdersProduction";
-            this.grdOrdersProduction.Size = new System.Drawing.Size(608, 339);
-            this.grdOrdersProduction.TabIndex = 1;
+            this.Delete,
+            this.dEVICEGROUPIDDataGridViewTextBoxColumn,
+            this.dEVICEGROUPDataGridViewTextBoxColumn,
+            this.cREATIONDATEDataGridViewTextBoxColumn,
+            this.cREATIONUSERDataGridViewTextBoxColumn});
+            this.grdGroupDevices.DataSource = this.tDEVICEGROUPBindingSource;
+            this.grdGroupDevices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdGroupDevices.Location = new System.Drawing.Point(207, 77);
+            this.grdGroupDevices.Name = "grdGroupDevices";
+            this.grdGroupDevices.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.grdGroupDevices.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.grdGroupDevices.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.grdGroupDevices.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdGroupDevices.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.grdGroupDevices.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.grdGroupDevices.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.grdGroupDevices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdGroupDevices.ShowCellErrors = false;
+            this.grdGroupDevices.ShowCellToolTips = false;
+            this.grdGroupDevices.ShowRowErrors = false;
+            this.grdGroupDevices.Size = new System.Drawing.Size(608, 339);
+            this.grdGroupDevices.TabIndex = 1;
             // 
             // Edit
             // 
-            this.Edit.HeaderText = "Editar";
-            this.Edit.Image = global::LabMan.Properties.Resources.iconEdit;
+            this.Edit.HeaderText = "";
+            this.Edit.Image = global::LabMan.Properties.Resources.Editv2;
             this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Delete
             // 
-            this.Delete.HeaderText = "Eliminar";
-            this.Delete.Image = global::LabMan.Properties.Resources.iconDelete;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = global::LabMan.Properties.Resources.delete;
             this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dEVICEGROUPIDDataGridViewTextBoxColumn
+            // 
+            this.dEVICEGROUPIDDataGridViewTextBoxColumn.DataPropertyName = "DEVICEGROUPID";
+            this.dEVICEGROUPIDDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.dEVICEGROUPIDDataGridViewTextBoxColumn.Name = "dEVICEGROUPIDDataGridViewTextBoxColumn";
+            // 
+            // dEVICEGROUPDataGridViewTextBoxColumn
+            // 
+            this.dEVICEGROUPDataGridViewTextBoxColumn.DataPropertyName = "DEVICEGROUP";
+            this.dEVICEGROUPDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.dEVICEGROUPDataGridViewTextBoxColumn.Name = "dEVICEGROUPDataGridViewTextBoxColumn";
+            // 
+            // cREATIONDATEDataGridViewTextBoxColumn
+            // 
+            this.cREATIONDATEDataGridViewTextBoxColumn.DataPropertyName = "CREATIONDATE";
+            this.cREATIONDATEDataGridViewTextBoxColumn.HeaderText = "Fecha de creación";
+            this.cREATIONDATEDataGridViewTextBoxColumn.Name = "cREATIONDATEDataGridViewTextBoxColumn";
+            // 
+            // cREATIONUSERDataGridViewTextBoxColumn
+            // 
+            this.cREATIONUSERDataGridViewTextBoxColumn.DataPropertyName = "CREATIONUSER";
+            this.cREATIONUSERDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.cREATIONUSERDataGridViewTextBoxColumn.Name = "cREATIONUSERDataGridViewTextBoxColumn";
+            // 
+            // tDEVICEGROUPBindingSource
+            // 
+            this.tDEVICEGROUPBindingSource.DataMember = "TDEVICEGROUP";
+            this.tDEVICEGROUPBindingSource.DataSource = this.uBSLABMN_MXDataSet3;
+            // 
+            // uBSLABMN_MXDataSet3
+            // 
+            this.uBSLABMN_MXDataSet3.DataSetName = "UBSLABMN_MXDataSet3";
+            this.uBSLABMN_MXDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel3
             // 
@@ -238,6 +325,30 @@
             this.label1.Text = "Gestión de grupos de dispositivos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // uBSLABMN_MXDataSet
+            // 
+            this.uBSLABMN_MXDataSet.DataSetName = "UBSLABMN_MXDataSet";
+            this.uBSLABMN_MXDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uBSLABMNMXDataSetBindingSource
+            // 
+            this.uBSLABMNMXDataSetBindingSource.DataSource = this.uBSLABMN_MXDataSet;
+            this.uBSLABMNMXDataSetBindingSource.Position = 0;
+            // 
+            // uBSLABMN_MXDataSet2
+            // 
+            this.uBSLABMN_MXDataSet2.DataSetName = "UBSLABMN_MXDataSet2";
+            this.uBSLABMN_MXDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uBSLABMNMXDataSet2BindingSource
+            // 
+            this.uBSLABMNMXDataSet2BindingSource.DataSource = this.uBSLABMN_MXDataSet2;
+            this.uBSLABMNMXDataSet2BindingSource.Position = 0;
+            // 
+            // tDEVICEGROUPTableAdapter
+            // 
+            this.tDEVICEGROUPTableAdapter.ClearBeforeFill = true;
+            // 
             // frmDevicesGroups
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,9 +371,15 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdOrdersProduction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdGroupDevices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tDEVICEGROUPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet3)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMNMXDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMNMXDataSet2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,10 +395,21 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddGroup;
-        private System.Windows.Forms.DataGridView grdOrdersProduction;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.DataGridView grdGroupDevices;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
+        private UBSLABMN_MXDataSet uBSLABMN_MXDataSet;
+        private System.Windows.Forms.BindingSource uBSLABMNMXDataSetBindingSource;
+        private UBSLABMN_MXDataSet2 uBSLABMN_MXDataSet2;
+        private System.Windows.Forms.BindingSource uBSLABMNMXDataSet2BindingSource;
+        private UBSLABMN_MXDataSet3 uBSLABMN_MXDataSet3;
+        private System.Windows.Forms.BindingSource tDEVICEGROUPBindingSource;
+        private UBSLABMN_MXDataSet3TableAdapters.TDEVICEGROUPTableAdapter tDEVICEGROUPTableAdapter;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dEVICEGROUPIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dEVICEGROUPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cREATIONDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cREATIONUSERDataGridViewTextBoxColumn;
     }
 }

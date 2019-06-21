@@ -85,7 +85,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1024, 591);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1025, 591);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
             // tableLayoutPanel3
@@ -235,7 +235,7 @@
             this.txtDescription.Size = new System.Drawing.Size(161, 18);
             this.txtDescription.TabIndex = 0;
             this.txtDescription.TabStop = false;
-            this.txtDescription.Text = "Dummie Text";
+            this.txtDescription.Text = "Descripción";
             // 
             // frmPanel1
             // 
@@ -325,8 +325,7 @@
             this.numMaterialCode.Size = new System.Drawing.Size(161, 21);
             this.numMaterialCode.TabIndex = 4;
             this.numMaterialCode.TabStop = false;
-            this.numMaterialCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numMaterialCode.ThousandsSeparator = true;
+            this.numMaterialCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // selMeasureUnit
             // 
@@ -378,7 +377,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1024, 60);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1025, 60);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // btnBack
@@ -387,12 +386,12 @@
             this.btnBack.BackgroundImage = global::LabMan.Properties.Resources.left_arrow;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnBack.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnBack.Location = new System.Drawing.Point(991, 3);
+            this.btnBack.Location = new System.Drawing.Point(992, 3);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(29, 20);
             this.btnBack.TabIndex = 0;
             this.btnBack.TabStop = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            //this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -423,7 +422,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 651);
+            this.ClientSize = new System.Drawing.Size(1025, 651);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
@@ -467,7 +466,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblMeasureUnit;
         private System.Windows.Forms.Label lblMaterialCode;
-        private System.Windows.Forms.NumericUpDown numMaterialCode;
         private System.Windows.Forms.ComboBox selMeasureUnit;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblFormTitle;
@@ -478,5 +476,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblPieces;
         private System.Windows.Forms.NumericUpDown numPieces;
+        private System.Windows.Forms.NumericUpDown numMaterialCode;
     }
 }

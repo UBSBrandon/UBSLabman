@@ -41,10 +41,11 @@
             this.btnAddGroup = new System.Windows.Forms.Button();
             this.txtGroupName = new System.Windows.Forms.TextBox();
             this.frmPanel1 = new System.Windows.Forms.Panel();
-            this.numGroupID = new System.Windows.Forms.NumericUpDown();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblGroupID = new System.Windows.Forms.Label();
             this.lblFormTitle = new System.Windows.Forms.Label();
+            this.btnSaveDe = new System.Windows.Forms.Button();
+            this.numGroupID = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -54,7 +55,6 @@
             this.frmPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.frmPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numGroupID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,6 +155,7 @@
             // frmPanel2
             // 
             this.frmPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.frmPanel2.Controls.Add(this.btnSaveDe);
             this.frmPanel2.Controls.Add(this.lblGroupName);
             this.frmPanel2.Controls.Add(this.pictureBox1);
             this.frmPanel2.Controls.Add(this.btnAddGroup);
@@ -200,20 +201,20 @@
             this.btnAddGroup.BackgroundImage = global::LabMan.Properties.Resources.btnAcceptPress;
             this.btnAddGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddGroup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddGroup.Enabled = false;
             this.btnAddGroup.FlatAppearance.BorderSize = 0;
             this.btnAddGroup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddGroup.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
             this.btnAddGroup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAddGroup.Location = new System.Drawing.Point(65, 92);
+            this.btnAddGroup.Location = new System.Drawing.Point(48, 92);
             this.btnAddGroup.MaximumSize = new System.Drawing.Size(151, 28);
             this.btnAddGroup.Name = "btnAddGroup";
-            this.btnAddGroup.Size = new System.Drawing.Size(101, 28);
+            this.btnAddGroup.Size = new System.Drawing.Size(151, 28);
             this.btnAddGroup.TabIndex = 7;
             this.btnAddGroup.TabStop = false;
             this.btnAddGroup.Text = "Agregar";
             this.btnAddGroup.UseVisualStyleBackColor = false;
+            this.btnAddGroup.Click += new System.EventHandler(this.btnAddGroup_Click);
             // 
             // txtGroupName
             // 
@@ -227,10 +228,9 @@
             this.txtGroupName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtGroupName.MaximumSize = new System.Drawing.Size(350, 30);
             this.txtGroupName.Name = "txtGroupName";
-            this.txtGroupName.Size = new System.Drawing.Size(59, 18);
+            this.txtGroupName.Size = new System.Drawing.Size(118, 18);
             this.txtGroupName.TabIndex = 0;
             this.txtGroupName.TabStop = false;
-            this.txtGroupName.Text = "Dummie Text";
             // 
             // frmPanel1
             // 
@@ -243,30 +243,6 @@
             this.frmPanel1.Name = "frmPanel1";
             this.frmPanel1.Size = new System.Drawing.Size(247, 460);
             this.frmPanel1.TabIndex = 0;
-            // 
-            // numGroupID
-            // 
-            this.numGroupID.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.numGroupID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numGroupID.BackColor = System.Drawing.SystemColors.Menu;
-            this.numGroupID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numGroupID.Font = new System.Drawing.Font("Calibri", 11F);
-            this.numGroupID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.numGroupID.InterceptArrowKeys = false;
-            this.numGroupID.Location = new System.Drawing.Point(54, 21);
-            this.numGroupID.Margin = new System.Windows.Forms.Padding(5, 5, 3, 5);
-            this.numGroupID.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numGroupID.MaximumSize = new System.Drawing.Size(300, 0);
-            this.numGroupID.Name = "numGroupID";
-            this.numGroupID.Size = new System.Drawing.Size(59, 21);
-            this.numGroupID.TabIndex = 16;
-            this.numGroupID.TabStop = false;
-            this.numGroupID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numGroupID.ThousandsSeparator = true;
             // 
             // pictureBox4
             // 
@@ -309,6 +285,49 @@
             this.lblFormTitle.Text = "Nuevo grupo de dispositivos";
             this.lblFormTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnSaveDe
+            // 
+            this.btnSaveDe.AccessibleName = "Orden de produccion";
+            this.btnSaveDe.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnSaveDe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveDe.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveDe.BackgroundImage = global::LabMan.Properties.Resources.btnAcceptPress;
+            this.btnSaveDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveDe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveDe.FlatAppearance.BorderSize = 0;
+            this.btnSaveDe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSaveDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveDe.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSaveDe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSaveDe.Location = new System.Drawing.Point(48, 145);
+            this.btnSaveDe.MaximumSize = new System.Drawing.Size(151, 28);
+            this.btnSaveDe.MinimumSize = new System.Drawing.Size(151, 28);
+            this.btnSaveDe.Name = "btnSaveDe";
+            this.btnSaveDe.Size = new System.Drawing.Size(151, 28);
+            this.btnSaveDe.TabIndex = 18;
+            this.btnSaveDe.TabStop = false;
+            this.btnSaveDe.Text = "Guardar";
+            this.btnSaveDe.UseVisualStyleBackColor = false;
+            this.btnSaveDe.Visible = false;
+            this.btnSaveDe.Click += new System.EventHandler(this.btnSaveDe_Click);
+            // 
+            // numGroupID
+            // 
+            this.numGroupID.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.numGroupID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numGroupID.BackColor = System.Drawing.SystemColors.Menu;
+            this.numGroupID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numGroupID.Enabled = false;
+            this.numGroupID.Font = new System.Drawing.Font("Calibri", 11F);
+            this.numGroupID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.numGroupID.Location = new System.Drawing.Point(54, 19);
+            this.numGroupID.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.numGroupID.MaximumSize = new System.Drawing.Size(350, 30);
+            this.numGroupID.Name = "numGroupID";
+            this.numGroupID.Size = new System.Drawing.Size(95, 18);
+            this.numGroupID.TabIndex = 17;
+            this.numGroupID.TabStop = false;
+            // 
             // frmAddGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +352,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.frmPanel1.ResumeLayout(false);
             this.frmPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numGroupID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -354,9 +372,10 @@
         private System.Windows.Forms.Button btnAddGroup;
         private System.Windows.Forms.TextBox txtGroupName;
         private System.Windows.Forms.Panel frmPanel1;
-        private System.Windows.Forms.NumericUpDown numGroupID;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblGroupID;
         private System.Windows.Forms.Label lblFormTitle;
+        private System.Windows.Forms.Button btnSaveDe;
+        private System.Windows.Forms.TextBox numGroupID;
     }
 }

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OP" targetNamespace="http://tempuri.org/OP.xsd" xmlns:mstns="http://tempuri.org/OP.xsd" xmlns="http://tempuri.org/OP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="UBSLABMN_MX" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="UBSLABMN_MX (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LabMan.Properties.Settings.GlobalReference.Default.UBSLABMN_MX" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TORDERPRODUCTIONTableAdapter" GeneratorDataComponentClassName="TORDERPRODUCTIONTableAdapter" Name="TORDERPRODUCTION" UserDataComponentName="TORDERPRODUCTIONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UBSLABMN_MX (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        O.ORDERID, O.PLANTNUMBER, O.MATNR, P.MAKTX, O.WORKCENTERID, O.REALQTY, O.PLANNEDQTY, O.REALDATE, O.PLANNEDDATE, O.QTYXPALLET, 
+                         O.STATUS
+FROM            TORDERPRODUCTION AS O INNER JOIN
+                         TPRODUCT AS P ON O.MATNR = P.MATNR</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ORDERID" DataSetColumn="ORDERID" />
+              <Mapping SourceColumn="MATNR" DataSetColumn="MATNR" />
+              <Mapping SourceColumn="REALQTY" DataSetColumn="REALQTY" />
+              <Mapping SourceColumn="PLANNEDQTY" DataSetColumn="PLANNEDQTY" />
+              <Mapping SourceColumn="REALDATE" DataSetColumn="REALDATE" />
+              <Mapping SourceColumn="PLANNEDDATE" DataSetColumn="PLANNEDDATE" />
+              <Mapping SourceColumn="QTYXPALLET" DataSetColumn="QTYXPALLET" />
+              <Mapping SourceColumn="STATUS" DataSetColumn="STATUS" />
+              <Mapping SourceColumn="PLANTNUMBER" DataSetColumn="PLANTNUMBER" />
+              <Mapping SourceColumn="MAKTX" DataSetColumn="MAKTX" />
+              <Mapping SourceColumn="WORKCENTERID" DataSetColumn="WORKCENTERID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OP" msprop:Generator_UserDSName="OP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TORDERPRODUCTION" msprop:Generator_TableClassName="TORDERPRODUCTIONDataTable" msprop:Generator_TableVarName="tableTORDERPRODUCTION" msprop:Generator_RowChangedName="TORDERPRODUCTIONRowChanged" msprop:Generator_TablePropName="TORDERPRODUCTION" msprop:Generator_RowDeletingName="TORDERPRODUCTIONRowDeleting" msprop:Generator_RowChangingName="TORDERPRODUCTIONRowChanging" msprop:Generator_RowEvHandlerName="TORDERPRODUCTIONRowChangeEventHandler" msprop:Generator_RowDeletedName="TORDERPRODUCTIONRowDeleted" msprop:Generator_RowClassName="TORDERPRODUCTIONRow" msprop:Generator_UserTableName="TORDERPRODUCTION" msprop:Generator_RowEvArgName="TORDERPRODUCTIONRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORDERID" msprop:Generator_ColumnVarNameInTable="columnORDERID" msprop:Generator_ColumnPropNameInRow="ORDERID" msprop:Generator_ColumnPropNameInTable="ORDERIDColumn" msprop:Generator_UserColumnName="ORDERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MATNR" msprop:Generator_ColumnVarNameInTable="columnMATNR" msprop:Generator_ColumnPropNameInRow="MATNR" msprop:Generator_ColumnPropNameInTable="MATNRColumn" msprop:Generator_UserColumnName="MATNR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REALQTY" msprop:Generator_ColumnVarNameInTable="columnREALQTY" msprop:Generator_ColumnPropNameInRow="REALQTY" msprop:Generator_ColumnPropNameInTable="REALQTYColumn" msprop:Generator_UserColumnName="REALQTY" type="xs:decimal" />
+              <xs:element name="PLANNEDQTY" msprop:Generator_ColumnVarNameInTable="columnPLANNEDQTY" msprop:Generator_ColumnPropNameInRow="PLANNEDQTY" msprop:Generator_ColumnPropNameInTable="PLANNEDQTYColumn" msprop:Generator_UserColumnName="PLANNEDQTY" type="xs:decimal" />
+              <xs:element name="REALDATE" msprop:Generator_ColumnVarNameInTable="columnREALDATE" msprop:Generator_ColumnPropNameInRow="REALDATE" msprop:Generator_ColumnPropNameInTable="REALDATEColumn" msprop:Generator_UserColumnName="REALDATE" type="xs:dateTime" />
+              <xs:element name="PLANNEDDATE" msprop:Generator_ColumnVarNameInTable="columnPLANNEDDATE" msprop:Generator_ColumnPropNameInRow="PLANNEDDATE" msprop:Generator_ColumnPropNameInTable="PLANNEDDATEColumn" msprop:Generator_UserColumnName="PLANNEDDATE" type="xs:dateTime" />
+              <xs:element name="QTYXPALLET" msprop:Generator_ColumnVarNameInTable="columnQTYXPALLET" msprop:Generator_ColumnPropNameInRow="QTYXPALLET" msprop:Generator_ColumnPropNameInTable="QTYXPALLETColumn" msprop:Generator_UserColumnName="QTYXPALLET" type="xs:decimal" />
+              <xs:element name="STATUS" msprop:Generator_ColumnVarNameInTable="columnSTATUS" msprop:Generator_ColumnPropNameInRow="STATUS" msprop:Generator_ColumnPropNameInTable="STATUSColumn" msprop:Generator_UserColumnName="STATUS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PLANTNUMBER" msprop:Generator_ColumnVarNameInTable="columnPLANTNUMBER" msprop:Generator_ColumnPropNameInRow="PLANTNUMBER" msprop:Generator_ColumnPropNameInTable="PLANTNUMBERColumn" msprop:Generator_UserColumnName="PLANTNUMBER">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAKTX" msprop:Generator_ColumnVarNameInTable="columnMAKTX" msprop:Generator_ColumnPropNameInRow="MAKTX" msprop:Generator_ColumnPropNameInTable="MAKTXColumn" msprop:Generator_UserColumnName="MAKTX" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WORKCENTERID" msprop:Generator_ColumnVarNameInTable="columnWORKCENTERID" msprop:Generator_ColumnPropNameInRow="WORKCENTERID" msprop:Generator_ColumnPropNameInTable="WORKCENTERIDColumn" msprop:Generator_UserColumnName="WORKCENTERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TORDERPRODUCTION" />
+      <xs:field xpath="mstns:ORDERID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

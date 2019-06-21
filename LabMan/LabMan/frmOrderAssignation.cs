@@ -38,6 +38,29 @@ namespace LabMan
                 form.Show();
             }
         }
-        
+
+        private void selPlant_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selWorkcenter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selDevice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmOrderAssignation_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'oP1.TORDERPRODUCTION' Puede moverla o quitarla según sea necesario.
+            this.tORDERPRODUCTIONTableAdapter.Fill(this.oP1.TORDERPRODUCTION);
+            // TODO: esta línea de código carga datos en la tabla 'oP.TORDERPRODUCTION' Puede moverla o quitarla según sea necesario.
+            this.tORDERPRODUCTIONTableAdapter.Fill(this.oP.TORDERPRODUCTION);
+
+        }
     }
 }

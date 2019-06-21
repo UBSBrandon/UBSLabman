@@ -37,6 +37,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.frmPanel2 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -182,6 +183,7 @@
             // frmPanel2
             // 
             this.frmPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.frmPanel2.Controls.Add(this.btnSave);
             this.frmPanel2.Controls.Add(this.pictureBox8);
             this.frmPanel2.Controls.Add(this.pictureBox7);
             this.frmPanel2.Controls.Add(this.pictureBox6);
@@ -197,6 +199,31 @@
             this.frmPanel2.Name = "frmPanel2";
             this.frmPanel2.Size = new System.Drawing.Size(247, 401);
             this.frmPanel2.TabIndex = 1;
+            // 
+            // btnSave
+            // 
+            this.btnSave.AccessibleName = "Orden de produccion";
+            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BackgroundImage = global::LabMan.Properties.Resources.btnAcceptPress;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Enabled = false;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSave.Location = new System.Drawing.Point(47, 304);
+            this.btnSave.MaximumSize = new System.Drawing.Size(151, 28);
+            this.btnSave.MinimumSize = new System.Drawing.Size(151, 28);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(151, 28);
+            this.btnSave.TabIndex = 17;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // pictureBox8
             // 
@@ -522,13 +549,10 @@
             this.selPlant.Size = new System.Drawing.Size(161, 26);
             this.selPlant.TabIndex = 2;
             this.selPlant.TabStop = false;
-            this.selPlant.SelectedIndexChanged += new System.EventHandler(this.selWorkcenter_SelectedIndexChanged);
-            this.selPlant.Click += new System.EventHandler(this.selProduct_SelectedIndexChanged);
             // 
             // dpPlannedDate
             // 
             this.dpPlannedDate.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dpPlannedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dpPlannedDate.CalendarForeColor = System.Drawing.SystemColors.WindowFrame;
             this.dpPlannedDate.CalendarMonthBackground = System.Drawing.SystemColors.Menu;
             this.dpPlannedDate.Checked = false;
@@ -573,6 +597,7 @@
             this.lblFormTitle.TabIndex = 1;
             this.lblFormTitle.Text = "Nueva órden de producción";
             this.lblFormTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFormTitle.Click += new System.EventHandler(this.lblFormTitle_Click);
             // 
             // tPLANTBindingSource
             // 
@@ -603,7 +628,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Órdenes de Producción";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.selPlant_SelectedIndexChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -667,5 +691,6 @@
         private UBSLABMN_MXDataSet1 uBSLABMN_MXDataSet1;
         private System.Windows.Forms.BindingSource tPLANTBindingSource;
         private UBSLABMN_MXDataSet1TableAdapters.TPLANTTableAdapter tPLANTTableAdapter;
+        private System.Windows.Forms.Button btnSave;
     }
 }

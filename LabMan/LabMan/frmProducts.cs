@@ -62,5 +62,10 @@ namespace LabMan
                 form.Show();
             }
         }
+
+        private void grdOrdersProduction_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

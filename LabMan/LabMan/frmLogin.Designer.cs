@@ -96,7 +96,7 @@
             this.lblForgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForgotPassword.Depth = 0;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Roboto", 11F);
+            //this.lblForgotPassword.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblForgotPassword.Location = new System.Drawing.Point(16, 438);
             this.lblForgotPassword.MouseState = MaterialSkin.MouseState.HOVER;

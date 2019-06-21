@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrderProduction));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -41,26 +45,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddOrder = new System.Windows.Forms.Button();
             this.grdOrdersProduction = new System.Windows.Forms.DataGridView();
-            this.oRDERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pLANTNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mATNRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wORKCENTERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pLANNEDQTYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rEALQTYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pLANNEDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rEALDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qTYXPALLETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bATCHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cREATIONDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cREATIONUSERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lASTCHANGEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lASTCHANGEUSERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tORDERPRODUCTIONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uBSLABMN_MXOrderProd = new LabMan.UBSLABMN_MXOrderProd();
-            this.tORDERPRODUCTIONTableAdapter = new LabMan.UBSLABMN_MXOrderProdTableAdapters.TORDERPRODUCTIONTableAdapter();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel1.SuspendLayout();
@@ -72,8 +58,6 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrdersProduction)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tORDERPRODUCTIONBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXOrderProd)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -156,158 +140,90 @@
             // 
             // grdOrdersProduction
             // 
+            this.grdOrdersProduction.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.grdOrdersProduction.AllowUserToAddRows = false;
-            this.grdOrdersProduction.AutoGenerateColumns = false;
+            this.grdOrdersProduction.AllowUserToDeleteRows = false;
+            this.grdOrdersProduction.AllowUserToResizeColumns = false;
+            this.grdOrdersProduction.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.grdOrdersProduction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdOrdersProduction.BackgroundColor = System.Drawing.Color.White;
-            this.grdOrdersProduction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdOrdersProduction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdOrdersProduction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Inch);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdOrdersProduction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grdOrdersProduction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grdOrdersProduction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.oRDERIDDataGridViewTextBoxColumn,
-            this.pLANTNUMBERDataGridViewTextBoxColumn,
-            this.mATNRDataGridViewTextBoxColumn,
-            this.wORKCENTERIDDataGridViewTextBoxColumn,
-            this.pLANNEDQTYDataGridViewTextBoxColumn,
-            this.rEALQTYDataGridViewTextBoxColumn,
-            this.pLANNEDDATEDataGridViewTextBoxColumn,
-            this.rEALDATEDataGridViewTextBoxColumn,
-            this.qTYXPALLETDataGridViewTextBoxColumn,
-            this.sTATUSDataGridViewTextBoxColumn,
-            this.bATCHDataGridViewTextBoxColumn,
-            this.cREATIONDATEDataGridViewTextBoxColumn,
-            this.cREATIONUSERDataGridViewTextBoxColumn,
-            this.lASTCHANGEDATEDataGridViewTextBoxColumn,
-            this.lASTCHANGEUSERDataGridViewTextBoxColumn,
-            this.Edit,
-            this.Delete});
-            this.grdOrdersProduction.DataSource = this.tORDERPRODUCTIONBindingSource;
+            this.Editar,
+            this.Eliminar});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Inch);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdOrdersProduction.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grdOrdersProduction.GridColor = System.Drawing.SystemColors.ButtonFace;
             resources.ApplyResources(this.grdOrdersProduction, "grdOrdersProduction");
             this.grdOrdersProduction.Name = "grdOrdersProduction";
+            this.grdOrdersProduction.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Inch);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdOrdersProduction.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grdOrdersProduction.RowHeadersVisible = false;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.grdOrdersProduction.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.grdOrdersProduction.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdOrdersProduction.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.grdOrdersProduction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.grdOrdersProduction.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.grdOrdersProduction.RowTemplate.ReadOnly = true;
+            this.grdOrdersProduction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdOrdersProduction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdOrdersProduction_CellContentClick_1);
             // 
-            // oRDERIDDataGridViewTextBoxColumn
+            // Editar
             // 
-            this.oRDERIDDataGridViewTextBoxColumn.DataPropertyName = "ORDERID";
-            resources.ApplyResources(this.oRDERIDDataGridViewTextBoxColumn, "oRDERIDDataGridViewTextBoxColumn");
-            this.oRDERIDDataGridViewTextBoxColumn.Name = "oRDERIDDataGridViewTextBoxColumn";
+            this.Editar.Description = "Editar";
+            resources.ApplyResources(this.Editar, "Editar");
+            this.Editar.Image = global::LabMan.Properties.Resources.Editv2;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // pLANTNUMBERDataGridViewTextBoxColumn
+            // Eliminar
             // 
-            this.pLANTNUMBERDataGridViewTextBoxColumn.DataPropertyName = "PLANTNUMBER";
-            resources.ApplyResources(this.pLANTNUMBERDataGridViewTextBoxColumn, "pLANTNUMBERDataGridViewTextBoxColumn");
-            this.pLANTNUMBERDataGridViewTextBoxColumn.Name = "pLANTNUMBERDataGridViewTextBoxColumn";
-            // 
-            // mATNRDataGridViewTextBoxColumn
-            // 
-            this.mATNRDataGridViewTextBoxColumn.DataPropertyName = "MATNR";
-            resources.ApplyResources(this.mATNRDataGridViewTextBoxColumn, "mATNRDataGridViewTextBoxColumn");
-            this.mATNRDataGridViewTextBoxColumn.Name = "mATNRDataGridViewTextBoxColumn";
-            this.mATNRDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // wORKCENTERIDDataGridViewTextBoxColumn
-            // 
-            this.wORKCENTERIDDataGridViewTextBoxColumn.DataPropertyName = "WORKCENTERID";
-            resources.ApplyResources(this.wORKCENTERIDDataGridViewTextBoxColumn, "wORKCENTERIDDataGridViewTextBoxColumn");
-            this.wORKCENTERIDDataGridViewTextBoxColumn.Name = "wORKCENTERIDDataGridViewTextBoxColumn";
-            this.wORKCENTERIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // pLANNEDQTYDataGridViewTextBoxColumn
-            // 
-            this.pLANNEDQTYDataGridViewTextBoxColumn.DataPropertyName = "PLANNEDQTY";
-            resources.ApplyResources(this.pLANNEDQTYDataGridViewTextBoxColumn, "pLANNEDQTYDataGridViewTextBoxColumn");
-            this.pLANNEDQTYDataGridViewTextBoxColumn.Name = "pLANNEDQTYDataGridViewTextBoxColumn";
-            this.pLANNEDQTYDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // rEALQTYDataGridViewTextBoxColumn
-            // 
-            this.rEALQTYDataGridViewTextBoxColumn.DataPropertyName = "REALQTY";
-            resources.ApplyResources(this.rEALQTYDataGridViewTextBoxColumn, "rEALQTYDataGridViewTextBoxColumn");
-            this.rEALQTYDataGridViewTextBoxColumn.Name = "rEALQTYDataGridViewTextBoxColumn";
-            // 
-            // pLANNEDDATEDataGridViewTextBoxColumn
-            // 
-            this.pLANNEDDATEDataGridViewTextBoxColumn.DataPropertyName = "PLANNEDDATE";
-            resources.ApplyResources(this.pLANNEDDATEDataGridViewTextBoxColumn, "pLANNEDDATEDataGridViewTextBoxColumn");
-            this.pLANNEDDATEDataGridViewTextBoxColumn.Name = "pLANNEDDATEDataGridViewTextBoxColumn";
-            // 
-            // rEALDATEDataGridViewTextBoxColumn
-            // 
-            this.rEALDATEDataGridViewTextBoxColumn.DataPropertyName = "REALDATE";
-            resources.ApplyResources(this.rEALDATEDataGridViewTextBoxColumn, "rEALDATEDataGridViewTextBoxColumn");
-            this.rEALDATEDataGridViewTextBoxColumn.Name = "rEALDATEDataGridViewTextBoxColumn";
-            // 
-            // qTYXPALLETDataGridViewTextBoxColumn
-            // 
-            this.qTYXPALLETDataGridViewTextBoxColumn.DataPropertyName = "QTYXPALLET";
-            resources.ApplyResources(this.qTYXPALLETDataGridViewTextBoxColumn, "qTYXPALLETDataGridViewTextBoxColumn");
-            this.qTYXPALLETDataGridViewTextBoxColumn.Name = "qTYXPALLETDataGridViewTextBoxColumn";
-            // 
-            // sTATUSDataGridViewTextBoxColumn
-            // 
-            this.sTATUSDataGridViewTextBoxColumn.DataPropertyName = "STATUS";
-            resources.ApplyResources(this.sTATUSDataGridViewTextBoxColumn, "sTATUSDataGridViewTextBoxColumn");
-            this.sTATUSDataGridViewTextBoxColumn.Name = "sTATUSDataGridViewTextBoxColumn";
-            // 
-            // bATCHDataGridViewTextBoxColumn
-            // 
-            this.bATCHDataGridViewTextBoxColumn.DataPropertyName = "BATCH";
-            resources.ApplyResources(this.bATCHDataGridViewTextBoxColumn, "bATCHDataGridViewTextBoxColumn");
-            this.bATCHDataGridViewTextBoxColumn.Name = "bATCHDataGridViewTextBoxColumn";
-            // 
-            // cREATIONDATEDataGridViewTextBoxColumn
-            // 
-            this.cREATIONDATEDataGridViewTextBoxColumn.DataPropertyName = "CREATIONDATE";
-            resources.ApplyResources(this.cREATIONDATEDataGridViewTextBoxColumn, "cREATIONDATEDataGridViewTextBoxColumn");
-            this.cREATIONDATEDataGridViewTextBoxColumn.Name = "cREATIONDATEDataGridViewTextBoxColumn";
-            // 
-            // cREATIONUSERDataGridViewTextBoxColumn
-            // 
-            this.cREATIONUSERDataGridViewTextBoxColumn.DataPropertyName = "CREATIONUSER";
-            resources.ApplyResources(this.cREATIONUSERDataGridViewTextBoxColumn, "cREATIONUSERDataGridViewTextBoxColumn");
-            this.cREATIONUSERDataGridViewTextBoxColumn.Name = "cREATIONUSERDataGridViewTextBoxColumn";
-            // 
-            // lASTCHANGEDATEDataGridViewTextBoxColumn
-            // 
-            this.lASTCHANGEDATEDataGridViewTextBoxColumn.DataPropertyName = "LASTCHANGEDATE";
-            resources.ApplyResources(this.lASTCHANGEDATEDataGridViewTextBoxColumn, "lASTCHANGEDATEDataGridViewTextBoxColumn");
-            this.lASTCHANGEDATEDataGridViewTextBoxColumn.Name = "lASTCHANGEDATEDataGridViewTextBoxColumn";
-            // 
-            // lASTCHANGEUSERDataGridViewTextBoxColumn
-            // 
-            this.lASTCHANGEUSERDataGridViewTextBoxColumn.DataPropertyName = "LASTCHANGEUSER";
-            resources.ApplyResources(this.lASTCHANGEUSERDataGridViewTextBoxColumn, "lASTCHANGEUSERDataGridViewTextBoxColumn");
-            this.lASTCHANGEUSERDataGridViewTextBoxColumn.Name = "lASTCHANGEUSERDataGridViewTextBoxColumn";
-            // 
-            // Edit
-            // 
-            resources.ApplyResources(this.Edit, "Edit");
-            this.Edit.Image = global::LabMan.Properties.Resources.iconEdit;
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Delete
-            // 
-            resources.ApplyResources(this.Delete, "Delete");
-            this.Delete.Image = global::LabMan.Properties.Resources.iconDelete;
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tORDERPRODUCTIONBindingSource
-            // 
-            this.tORDERPRODUCTIONBindingSource.DataMember = "TORDERPRODUCTION";
-            this.tORDERPRODUCTIONBindingSource.DataSource = this.uBSLABMN_MXOrderProd;
-            // 
-            // uBSLABMN_MXOrderProd
-            // 
-            this.uBSLABMN_MXOrderProd.DataSetName = "UBSLABMN_MXOrderProd";
-            this.uBSLABMN_MXOrderProd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tORDERPRODUCTIONTableAdapter
-            // 
-            this.tORDERPRODUCTIONTableAdapter.ClearBeforeFill = true;
+            this.Eliminar.Description = "Eliminar";
+            resources.ApplyResources(this.Eliminar, "Eliminar");
+            this.Eliminar.Image = global::LabMan.Properties.Resources.delete;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
             // 
             // dataGridViewImageColumn1
             // 
             resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
             this.dataGridViewImageColumn1.Image = global::LabMan.Properties.Resources.iconEdit;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewImageColumn2
@@ -315,6 +231,7 @@
             resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
             this.dataGridViewImageColumn2.Image = global::LabMan.Properties.Resources.iconDelete;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // frmOrderProduction
@@ -341,8 +258,6 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdOrdersProduction)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tORDERPRODUCTIONBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uBSLABMN_MXOrderProd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,30 +273,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView grdOrdersProduction;
-        private UBSLABMN_MXOrderProd uBSLABMN_MXOrderProd;
-        private System.Windows.Forms.BindingSource tORDERPRODUCTIONBindingSource;
-        private UBSLABMN_MXOrderProdTableAdapters.TORDERPRODUCTIONTableAdapter tORDERPRODUCTIONTableAdapter;
         private System.Windows.Forms.Button btnAddOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oRDERIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pLANTNUMBERDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mATNRDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wORKCENTERIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pLANNEDQTYDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rEALQTYDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pLANNEDDATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rEALDATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qTYXPALLETDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bATCHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cREATIONDATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cREATIONUSERDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lASTCHANGEDATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lASTCHANGEUSERDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView grdOrdersProduction;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

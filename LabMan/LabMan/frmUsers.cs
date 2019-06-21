@@ -55,5 +55,12 @@ namespace LabMan
                 form.Show();
             }
         }
+
+        private void frmUsers_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'uBSLABMN_MXDataSet4.TUSER' Puede moverla o quitarla según sea necesario.
+            this.tUSERTableAdapter.Fill(this.uBSLABMN_MXDataSet4.TUSER);
+
+        }
     }
 }
